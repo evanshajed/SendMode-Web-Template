@@ -265,6 +265,10 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
    -webkit-box-shadow: 0px 0px 3px #000000;
    box-shadow: 0px 0px 3px #000000;
    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/}
+   
+   /* topContainer segment */
+   #topContainer{ text-align: right; padding-right: 1em;}
+   #topContainer h4{color: #FFF;font-size: 1.2em; font-weight:normal;line-height: normal;}
 
 
 
