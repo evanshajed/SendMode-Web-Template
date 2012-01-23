@@ -197,6 +197,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 
 /* #Base 960 Grid
+Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 ================================================== */
 
     .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
@@ -250,8 +251,20 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* =============================================================================
    Primary styles
-   Author: 
+   Author: Shajed Evan http://www.behance.net/evanshajed
    ========================================================================== */
+   body{background:#0E6399 url("../images/background.gif") repeat-x;}
+   #container{background-color: #ffffff;
+   border-width: 1px;
+   border-color: #8a8a8a;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+   -moz-box-shadow: 0px 0px 3px #000000;
+   -webkit-box-shadow: 0px 0px 3px #000000;
+   box-shadow: 0px 0px 3px #000000;
+   /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/}
 
 
 
