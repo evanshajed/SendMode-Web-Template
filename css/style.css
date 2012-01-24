@@ -247,12 +247,59 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
     .container .offset-by-fifteen               { padding-left: 900px; }
 
 
+	.sendmode{
+	background-image:url(sprite.png);
+	background-repeat:no-repeat;
+	display:block;
+	text-indent:-99999px;
+	overflow:hidden;
+	}
+
+	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
+	.flag_125{height:12px;width:16px;background-position:-533px 0;}
+	.flag_160{height:12px;width:16px;background-position:-533px -12px;}
+	.flag_183{height:12px;width:16px;background-position:-533px -24px;}
+	.flag_9{height:12px;width:16px;background-position:-533px -36px;}
+	.flag_italy{height:16px;width:16px;background-position:-533px -48px;}
+	.icon_1{height:90px;width:112px;background-position:0 -98px;}
+	.icon_2{height:90px;width:112px;background-position:0 -188px;}
+	.icon_3{height:90px;width:112px;background-position:0 -278px;}
+	.icon_4{height:90px;width:112px;background-position:0 -368px;}
+	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
+	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
+	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
 
 
 /* =============================================================================
    Primary styles
    Author: Shajed Evan http://www.behance.net/evanshajed
    ========================================================================== */
+   
+   /* Sprite images */
+   
+   .sendmode{
+	background-image:url(../images/sprite.png);
+	background-repeat:no-repeat;
+	display:block;
+	text-indent:-99999px;
+	overflow:hidden;
+	}
+
+	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
+	.flag_125{height:12px;width:16px;background-position:-533px 0;}
+	.flag_160{height:12px;width:16px;background-position:-533px -12px;}
+	.flag_183{height:12px;width:16px;background-position:-533px -24px;}
+	.flag_9{height:12px;width:16px;background-position:-533px -36px;}
+	.flag_italy{height:16px;width:16px;background-position:-533px -48px;}
+	.icon_1{height:90px;width:112px;background-position:0 -98px;}
+	.icon_2{height:90px;width:112px;background-position:0 -188px;}
+	.icon_3{height:90px;width:112px;background-position:0 -278px;}
+	.icon_4{height:90px;width:112px;background-position:0 -368px;}
+	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
+	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
+	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
+	
+	/* body segment */	
    body{background:#0E6399 url("../images/background.gif") repeat-x;}
    #container{background-color: #ffffff;
    border-width: 1px;
@@ -266,11 +313,26 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
    box-shadow: 0px 0px 3px #000000;
    /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/}
    
+   
+   
    /* topContainer segment */
-   #topContainer{ text-align: right; padding-right: 1em;}
-   #topContainer h4{color: #FFF;font-size: 1.2em; font-weight:normal;line-height: normal;}
-
-
+   #topContainer{ text-align: right; padding-right: 1em; margin-bottom: 1em; margin-top: 1em;}
+   #topContainer h4,#topContainer p{display: inline;}
+   #topContainer h4{color: #FFF;font-size: 1em; font-weight:normal;line-height:normal; padding: 0 .5em 0 0}
+   #topContainer p{padding:0 0.5em 0 0.5em}
+   #topContainer span.country{color: #E6B73D}
+   #topContainer span.tel{color: #FFF}
+   #topContainer span.country,#topContainer span.tel{font-size:1.2em; font-weight: 700; font-stretch: normal;font-variant:normal; text-transform: capitalize;}
+   #topContainer span.country:after{content:": ";}
+	
+	/* header segment */
+	#header h1 {display: inline-table;}
+	#header section.country{float: right;}
+	#header section.country h3{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
+	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
+	
+	nav{float: right; margin-top: 1em;}
+	
 
 
 
