@@ -331,8 +331,40 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	#header section.country h3{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
 	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
 	
+	/* top navigation */
 	nav{float: right; margin-top: 1em;}
 	
+	/* main */
+	
+	.box{
+	border-bottom: 1px solid #CCC;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 0px 0px 3px 0.4px #000000;
+	-webkit-box-shadow: 0px 0px 3px 0.4px #000000;
+	box-shadow: 0px 0px 3px 0.4px #000000;
+	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
+	
+	h1.title{
+		color: #FFF;
+		font-size: 1.2em;
+		background-color: #7C8F93;
+		height: 1.3em;
+		border-width: 1px;
+		border-color: #a6a09f;
+		-moz-border-radius: 10px 10px 0px 0px;
+		-webkit-border-radius: 10px 10px 0px 0px;
+		border-radius: 10px 10px 0px 0px;
+		-moz-box-shadow: inset 0px 0px 1px 0.4px #666;
+		-webkit-box-shadow: inset 0px 0px 1px 0.4px #666;
+		box-shadow: inset 0px 0px 1px 0.4px #666;
+		padding: 0.5em 0.8em 0.5em 0.5em;
+	}
+	
+	h1.title:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	
+	.box p, .box section{padding: 1em;}
 
 
 
