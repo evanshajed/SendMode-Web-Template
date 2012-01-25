@@ -299,6 +299,11 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
 	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
 	
+	/* Global Segment */
+	body,ul#double,#features a{ -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;}
+	
 	/* body segment */	
    body{background:#0E6399 url("../images/background.gif") repeat-x;}
    #container{background-color: #ffffff;
@@ -362,9 +367,56 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 		padding: 0.5em 0.8em 0.5em 0.5em;
 	}
 	
-	h1.title:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	h1.title:before,ul#double li:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
 	
 	.box p, .box section{padding: 1em;}
+	
+	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;}
+	ul#double li{ line-height: 1.5em; float: left; display: inline; width: 50%;}
+	
+	span#button{ margin-left: 30%; margin-top: 10%;}
+	a.signup{font-size: 1.5em; font-weight: 700; text-transform: capitalize; text-decoration: none;color: #FFF;padding: .3em .5em; background: #85B63A; border: 2px solid #CCC;-moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+text-align: center;
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#1ee82d', endColorstr = '#26a13b');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#1ee82d', endColorstr = '#26a13b')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #1ee82d, #26a13b);
+background-image: -ms-linear-gradient(top, #1ee82d, #26a13b);
+background-image: -o-linear-gradient(top, #1ee82d, #26a13b);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#1ee82d), to(#26a13b));
+background-image: -webkit-linear-gradient(top, #1ee82d, #26a13b);
+background-image: linear-gradient(top, #1ee82d, #26a13b);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+}
+a:hover.signup{filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#416b3e', endColorstr = '#11481b');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#416b3e', endColorstr = '#11481b')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #416b3e, #11481b);
+background-image: -ms-linear-gradient(top, #416b3e, #11481b);
+background-image: -o-linear-gradient(top, #416b3e, #11481b);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#416b3e), to(#11481b));
+background-image: -webkit-linear-gradient(top, #416b3e, #11481b);
+background-image: linear-gradient(top, #416b3e, #11481b);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+}
+
+
+	/* Fatures segment */
+	#features{padding-bottom: 0.8em;}
+	#features a{display: inline-table; width: 17%; text-align: center;background: #F5F7F7; padding-left:0.5em; padding-bottom: 0.5em; font-size: 0.9em; margin: 0 0.5em 0 0.5em; border: 1px solid #EEE}
+	#features span{ margin-bottom: 10px;}
+	
+	
 
 
 
