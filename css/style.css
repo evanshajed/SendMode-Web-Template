@@ -300,7 +300,7 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
 	
 	/* Global Segment */
-	body,ul#double,#features a{ -moz-border-radius: 5px;
+	body,ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
    border-radius: 5px;}
 	
@@ -413,14 +413,75 @@ background-image: linear-gradient(top, #416b3e, #11481b);
 
 	/* Fatures segment */
 	#features{padding-bottom: 0.8em;}
-	#features a{display: inline-table; width: 17%; text-align: center;background: #F5F7F7; padding-left:0.5em; padding-bottom: 0.5em; font-size: 0.9em; margin: 0 0.5em 0 0.5em; border: 1px solid #EEE}
+	#features a{display: inline-table; width: 17%; text-align: center;background: #F5F7F7; padding-left:0.5em; padding-bottom: 0.5em; font-size: 0.9em; margin: 0 0.5em 0 0.3em; border: 1px solid #EEE}
 	#features span{ margin-bottom: 10px;}
 	
 	
 
 
 
+	/* Aside */
+	
+	#recommendation{}
+	#recommendation ul{margin:0 auto; padding: 0.8em 0.5em 0.5em 1em; margin-bottom: 1.2em;}
+	#recommendation ul li{list-style: none; padding: 0;margin: 0 0 1.2em 0;}
+	#recommendation blockquote{margin: 0.3em 0.8em 0.5em 0.4em; color: #666; font-style: italic;}
+	#recommendation cite{ font-weight: 600;}
+	#recommendation a.more{ padding: 0.5em 0.8em 1.3em 0.8em;font-size:1em; display: block;}
+	
+	/* Side Nav */
+	#sideNav{ background: #92B628;}
+	#sideNav h1{margin-bottom: 0;}
+	#sideNav ul{margin: 0 auto; padding: 0px}
+	#sideNav ul li{ color: #999; font-size: 1.2em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none; padding: 0.5em;
 
+border-width: 1px;
+border-color: transparent;
+-moz-box-shadow: 0px 1px #ccc;
+-webkit-box-shadow: 0px 1px #ccc;
+box-shadow: 0px 1px #ccc;
+filter: progid: DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff8f7');
+-ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#fff8f7')";
+/*Shadows look very different in IE (Only cardinal directions supported)*/
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element should have a background-color*/
+/*All filters must be placed together*/
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#82d182', endColorstr = '#52ba32');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#82d182', endColorstr = '#52ba32')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #82d182, #52ba32);
+background-image: -ms-linear-gradient(top, #82d182, #52ba32);
+background-image: -o-linear-gradient(top, #82d182, #52ba32);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#82d182), to(#52ba32));
+background-image: -webkit-linear-gradient(top, #82d182, #52ba32);
+background-image: linear-gradient(top, #82d182, #52ba32);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+}
+#sideNav ul li:hover{filter: progid: DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff8f7');
+-ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#fff8f7')";
+/*Shadows look very different in IE (Only cardinal directions supported)*/
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element should have a background-color*/
+/*All filters must be placed together*/
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#335233', endColorstr = '#245216');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#335233', endColorstr = '#245216')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #335233, #245216);
+background-image: -ms-linear-gradient(top, #335233, #245216);
+background-image: -o-linear-gradient(top, #335233, #245216);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#335233), to(#245216));
+background-image: -webkit-linear-gradient(top, #335233, #245216);
+background-image: linear-gradient(top, #335233, #245216);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/}
+	#sideNav ul li a{text-decoration: none;color: #FFF;}
 
 
 /* =============================================================================
