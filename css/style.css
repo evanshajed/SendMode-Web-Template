@@ -246,30 +246,6 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
-
-	.sendmode{
-	background-image:url(sprite.png);
-	background-repeat:no-repeat;
-	display:block;
-	text-indent:-99999px;
-	overflow:hidden;
-	}
-
-	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
-	.flag_125{height:12px;width:16px;background-position:-533px 0;}
-	.flag_160{height:12px;width:16px;background-position:-533px -12px;}
-	.flag_183{height:12px;width:16px;background-position:-533px -24px;}
-	.flag_9{height:12px;width:16px;background-position:-533px -36px;}
-	.flag_italy{height:16px;width:16px;background-position:-533px -48px;}
-	.icon_1{height:90px;width:112px;background-position:0 -98px;}
-	.icon_2{height:90px;width:112px;background-position:0 -188px;}
-	.icon_3{height:90px;width:112px;background-position:0 -278px;}
-	.icon_4{height:90px;width:112px;background-position:0 -368px;}
-	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
-	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
-	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
-
-
 /* =============================================================================
    Primary styles
    Author: Shajed Evan http://www.behance.net/evanshajed
@@ -298,6 +274,7 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
 	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
 	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
+	.pic_ireland{height:97px;width:98px;background: url(../images/flag_80.gif) no-repeat; display: block; overflow: hidden; text-indent: -99999px;}
 	
 	/* Global Segment */
 	body,ul#double,#features a,#sideNav,nav#headerNav{ -moz-border-radius: 5px;
@@ -374,6 +351,114 @@ nav#headerNav li:last-child{border-right: none; clear: right;}
 nav#headerNav li:hover{background: #5CB6E0;}
 nav#headerNav li a{color: #FFF; text-decoration: none;}
 nav#headerNav li a:hover{color: #333}
+
+
+	/* Slider */
+	#slidedeck_frame{
+		width: 650px;
+		height: 300px;
+	}
+	#slidedeck_frame img.slideContent{float: left; padding-right: 2em;}
+	#slidedeck_frame h3{font-size: 2em;}
+	#slidedeck_frame a.slideButton:link{
+        border-color:#dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        DropShadow(Color=#262e4d, OffX=0, OffY=1);
+        border-style:solid;
+        border-width:1px;
+        }
+
+#slidedeck_frame a.slideButton:hover{
+        border-color:#dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3f61a6), to(#304670));
+        background: -moz-linear-gradient(#3f61a6, #304670);
+        background: linear-gradient(#3f61a6, #304670);
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        DropShadow(Color=#262e4d, OffX=0, OffY=1);
+        border-style:solid;
+        border-width:1px;
+        }
+
+#slidedeck_frame a.slideButton:active{
+        border-color:#dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        DropShadow(Color=#262e4d, OffX=0, OffY=1);
+        border-style:solid;
+        border-width:1px;
+        }
+
+#slidedeck_frame a.slideButton:visited{
+        border-color:#dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        DropShadow(Color=#262e4d, OffX=0, OffY=1);
+        border-style:solid;
+        border-width:1px;
+        }
 	
 	/* main */
 	
@@ -469,7 +554,7 @@ background-image: linear-gradient(top, #416b3e, #11481b);
 	#sideNav{ background: #92B628;}
 	#sideNav h1{margin-bottom: 0;}
 	#sideNav ul{margin: 0 auto; padding: 0px}
-	#sideNav ul li{ color: #999; font-size: 1.2em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none; padding: 0.5em;
+	#sideNav ul li{ color: #999; font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none; padding: 0.5em;
 
 border-width: 1px;
 border-color: transparent;
@@ -491,7 +576,9 @@ background-image: -webkit-linear-gradient(top, #2f6e23, #2f8035);
 background-image: linear-gradient(top, #2f6e23, #2f8035);
 /*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
 }
-#sideNav ul li:hover{filter: progid: DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff8f7');
+#sideNav ul li:hover{
+cursor:pointer;
+filter: progid: DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff8f7');
 -ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#fff8f7')";
 /*Shadows look very different in IE (Only cardinal directions supported)*/
 /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
@@ -511,7 +598,48 @@ background-image: -webkit-gradient(linear, center top, center bottom, from(#3352
 background-image: -webkit-linear-gradient(top, #335233, #245216);
 background-image: linear-gradient(top, #335233, #245216);
 /*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/}
-	#sideNav ul li a{text-decoration: none;color: #FFF;}
+	#sideNav ul li a{text-decoration: none;color: #FFF}
+	
+	/* Free Trial and Blog Segment */
+	#sideNav ul li.freeTrial,#sideNav ul li.blog{
+		background-color: #c92716;
+border-width: 2px;
+border-color: #999999;
+filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#9c3317', endColorstr = '#6e0c06');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#9c3317', endColorstr = '#6e0c06')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #9c3317, #6e0c06);
+background-image: -ms-linear-gradient(top, #9c3317, #6e0c06);
+background-image: -o-linear-gradient(top, #9c3317, #6e0c06);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#9c3317), to(#6e0c06));
+background-image: -webkit-linear-gradient(top, #9c3317, #6e0c06);
+background-image: linear-gradient(top, #9c3317, #6e0c06);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+}
+
+	#sideNav ul li.freeTrial:hover,#sideNav ul li.blog:hover{
+	cursor: default;
+	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#c92c1c', endColorstr = '#cf3d2d');
+/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+-ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#c92c1c', endColorstr = '#cf3d2d')";
+/*Element must have a height (not auto)*/
+/*All filters must be placed together*/
+background-image: -moz-linear-gradient(top, #c92c1c, #cf3d2d);
+background-image: -ms-linear-gradient(top, #c92c1c, #cf3d2d);
+background-image: -o-linear-gradient(top, #c92c1c, #cf3d2d);
+background-image: -webkit-gradient(linear, center top, center bottom, from(#c92c1c), to(#cf3d2d));
+background-image: -webkit-linear-gradient(top, #c92c1c, #cf3d2d);
+background-image: linear-gradient(top, #c92c1c, #cf3d2d);
+/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/}
+	#sideNav ul li.freeTrial:before{content: url("../images/sign_up.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	
+	#sideNav ul li.blog:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
 	
 	#developerAPI{}
 	#developerAPI p{float: left; margin-right: 5px; display:inline-table; width: 30%; padding: 0.3em 0.3em 1em 1em;}

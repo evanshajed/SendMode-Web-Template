@@ -4,6 +4,11 @@
 
 $(document).ready(function() {
     setHeight('.featuredService');
+    	$('.slidedeck').slidedeck({
+                autoPlay: true,
+                cycle: true, 
+                autoPlayInterval: 4000 
+            });
 });
 
 var maxHeight = 0;

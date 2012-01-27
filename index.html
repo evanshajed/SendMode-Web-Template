@@ -14,10 +14,18 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/slidedeck.skin.css" media="screen">
+	 <!-- Styles for the skin that only load for Internet Explorer -->
+        <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/slidedeck.skin.ie.css" media="screen,handheld" />
+        <![endif]-->
 	<!-- Using rel="author" please include your contact/about page inside the href. If you have a google plus profile page you can use that link too! -->
 	<link rel="author" href="/contact.html">
 	<link rel="shortcut icon" href="/favicon.ico">
-
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="js/slidedeck.jquery.lite.pack.js"></script>
 	<script src="js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
@@ -41,7 +49,7 @@
 		<section id="country" class="country">
 			<h3>SnedMode International</h3>
 			
-				<a href="#" title=""><span class="sendmode flag_italy">Italy</span></a>
+				<a href="#" title=""><span class="pic_ireland">Ireland</span></a>
 				<span class="sendmode flag_183"><a href="#">UK</a></span>
 				<span class="sendmode flag_160"><a href="#">South Africa</a></span>
 				<span class="sendmode flag_9"><a href="#">Australia</a></span>
@@ -62,10 +70,27 @@
 		</nav>
 	</header>
 	<div class="twelve columns" id="main" role="main">
-		<section>
-			<h1>This is the slider segment</h1>
-			Slider will come here
-		</section>
+			<section id="slidedeck_frame" class="skin-slidedeck">
+				<h1 class="visuallyhidden">This is the slider segment</h1>
+				<dl class="slidedeck">
+					<dt>Realtime SMS</dt>
+					<dd>
+						<img class="slideContent" src="images/iPhone.jpg" alt="iPhone SMS" title="iPhone SMS"/>
+						<h3>This is a Title</h3>
+						<p>This is the content of this slider. Remember don't place too many lines of content on each slider.</p>
+						<p>Height for each slider <a href="#" title="title of this link">container</a> is only 300px so beaware of including any images!</p>
+						<a class="slideButton" href="#">Action Button</a>
+					</dd>
+					<dt>Bulk Text SMS</dt>
+					<dd>
+						<img class="slideContent" src="images/iPhone.jpg" alt="iPhone SMS" title="iPhone SMS"/>
+						<h3>This is a Title</h3>
+						<p>This is the content of this slider. Remember don't place too many lines of content on each slider.</p>
+						<p>Height for each slider <a href="#" title="title of this link">container</a> is only 300px so beaware of including any images!</p>
+						<a class="slideButton" href="#">Action Button</a>
+					</dd>
+				</dl>
+			</section>
 		<article class="box">
 			<h1 class="title">Bulk SMS Marketing, News and Alerts Platform</h1>
 			<p>SendMode's award winning service is the leading supplier of simple, reliable, low cost bulk SMS and mobile marketing services to thousands of organisations, ranging from large multinational companies to small independent businesses, clubs and charities.</p>
@@ -117,6 +142,7 @@
 		<aside id="sideNav">
 		<h1 class="title">Next Steps</h1>
 		<ul>
+			<li class="freeTrial"><a href="#">Sign Up for Free Trial</a></li>
 			<li><a href="#">Award Winning Services</a></li>
 			<li><a href="#">Getting Started Videos</a></li>
 			<li><a href="#">What is Mobile Marketing</a></li>
@@ -127,8 +153,8 @@
 			<li><a href="#">Switch to SendMode</a></li>
 			<li><a href="#">Meet the Team</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li>Blog</li>
-		</ul>
+			<li class="blog"><a href="#">Blog</a></li>
+			</ul>
 		</aside>
 		<aside id="recommendation" class="box">
 			<h1 class="title">Testimonials</h1>
@@ -213,9 +239,6 @@
 </div>
 <small>All Right Reserved 2012, SendMode</small>
 <!--! end of #container -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>
