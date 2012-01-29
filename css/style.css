@@ -41,20 +41,20 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
  * Also: hot pink!
  */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #063163; color: #fff; text-shadow: none; }
+::selection { background: #063163; color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
+a { color: #063163; }
+a:visited { color: #063163; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: 0; }
+a:hover, a:active { outline: 0; color: #0E6298; }
 
 
 /* =============================================================================
@@ -495,7 +495,7 @@ nav#headerNav li a:hover{color: #333}
 	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;}
 	ul#double li{ line-height: 1.5em; float: left; display: inline; width: 50%;}
 	
-	span#button{ margin-left: 30%; margin-top: 10%;}
+	span#button{ margin-left: 30%; margin-top: 5%; display: inline-table;}
 	a.signup{font-size: 1.5em; font-weight: 700; text-transform: capitalize; text-decoration: none;color: #FFF;padding: .3em .5em; background: #85B63A; border: 2px solid #CCC;-moz-border-radius: 16px;
 -webkit-border-radius: 16px;
 border-radius: 16px;
@@ -534,8 +534,9 @@ background-image: linear-gradient(top, #416b3e, #11481b);
 
 	/* Fatures segment */
 	#features{padding-bottom: 0.8em;}
-	#features a{display: inline-table; width: 17%; text-align: center;background: #F5F7F7; padding-left:0.5em; padding-bottom: 0.5em; font-size: 0.9em; margin: 0 0.5em 0 0.3em; border: 1px solid #EEE}
-	#features span{ margin-bottom: 10px;}
+	#features a{display: inline-table; width: 15%; background-color:#EEE; border: 1px solid #CCC; padding: 5px 8px 5px 8px; cursor: pointer; text-align: center; margin-left:5px;}
+	#features span{margin-bottom: 10px;}
+	#features a:hover{background-color: #CCC;}
 	
 	
 
@@ -657,6 +658,10 @@ background-image: linear-gradient(top, #c92c1c, #cf3d2d);
 	#fnav li{list-style: square inside; padding-top: 0.5em;}
 	#fnav li a{color: #FFF; text-decoration: none;}
 	#fnav li a:hover{text-decoration: underline;}
+	
+	span#CopyRight{margin: 0 auto; padding: 1em 0 1em 0; display: block;}
+	span#CopyRight a{color: #BBB;}
+	span#CopyRight a:hover{color: #FFF;}
 	
 
 /* =============================================================================
