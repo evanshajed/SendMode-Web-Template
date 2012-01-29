@@ -315,7 +315,6 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	
 	/* top navigation */
 	nav#headerNav{
-	height: 
 	width:60%;
 		float: right;
 		position: absolute;
@@ -380,7 +379,6 @@ nav#headerNav li a:hover{color: #333}
         background: linear-gradient(#6397ff, #41609c);
         padding:5px 15px;
         text-shadow:#262e4d 0px 1px 0px;
-        DropShadow(Color=#262e4d, OffX=0, OffY=1);
         border-style:solid;
         border-width:1px;
         }
@@ -405,7 +403,6 @@ nav#headerNav li a:hover{color: #333}
         background: linear-gradient(#3f61a6, #304670);
         padding:5px 15px;
         text-shadow:#262e4d 0px 1px 0px;
-        DropShadow(Color=#262e4d, OffX=0, OffY=1);
         border-style:solid;
         border-width:1px;
         }
@@ -430,7 +427,6 @@ nav#headerNav li a:hover{color: #333}
         background: linear-gradient(#6397ff, #41609c);
         padding:5px 15px;
         text-shadow:#262e4d 0px 1px 0px;
-        DropShadow(Color=#262e4d, OffX=0, OffY=1);
         border-style:solid;
         border-width:1px;
         }
@@ -455,7 +451,6 @@ nav#headerNav li a:hover{color: #333}
         background: linear-gradient(#6397ff, #41609c);
         padding:5px 15px;
         text-shadow:#262e4d 0px 1px 0px;
-        DropShadow(Color=#262e4d, OffX=0, OffY=1);
         border-style:solid;
         border-width:1px;
         }
