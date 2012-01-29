@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>SendMode</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="themes/sendmode-mobile-theme.min.css" />
+	<link rel="stylesheet" href="css/mobile.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+</head> 
+<body class="ui-mobile-viewport"> 
+
+<div data-role="page" id="one" tabindex="0" class="ui-page">
+
+	<div data-role="header" data-position="fixed" role="banner">
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+		<h1>SendMode</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" class="ui-content" role="main">
+		<h1>Simple, Reliable and Secure Messaging service</h1>	
+		<div class="ui-grid-a">
+			<div class="ui-block-a">
+				<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Features</span></span></a></p>
+			</div>
+			<div class="ui-block-b"><p>You are one step away to reach your customers!<a href="#" title="SignUp">Signup For Free!</a></p></div>
+		</div><!-- /grid-a -->
+		
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+
+			<div data-role="collapsible">
+				<h3>Section 1</h3>
+				<p>I'm the collapsible set content for section B.</p>
+			</div>
+	
+			<div data-role="collapsible">
+				<h3>Section 2</h3>
+				<p>I'm the collapsible set content for section B.</p>
+			</div>
+	
+		</div>
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer"> 
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#" title="title" data-theme="a">One</a></li>
+				<li><a href="#" title="title" data-theme="b">One</a></li>
+				<li><a href="#" title="title" data-theme="c">One</a></li>
+			</ul>
+		</nav>
+	</div>
+
+</div><!-- /page -->
+
+<div data-role="dialog" id="popup" tabindex="0" data-transition="pop" class="ui-page ui-body-a ui-overlay-a ui-dialog" role="dialog" style="min-height: 320px; ">
+
+	<div data-role="header" data-theme="a" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-e" role="banner">
+	<a href="#" data-icon="delete" data-iconshadow="true" data-transition="pop" data-iconpos="left" title="Close" data-theme="a">
+		<span class="ui-btn-text">Close</span>
+	</a>
+		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Ta-da!</h1>
+	</div>
+
+	<div data-role="content" data-theme="a" class="ui-overlay-shadow ui-content ui-body-a" role="main">	
+		<h2>Popup</h2>
+		<p>Howdy</p>		
+		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="a" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Back to page "one"</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer" class="ui-overlay-shadow ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
+		<h4 class="ui-title" tabindex="0" role="heading" aria-level="1">Page Footer</h4>
+	</div><!-- /footer -->
+</div>
+<div class="ui-loader ui-body-a ui-corner-all" style="top: 335.5px; "><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
+
+</body>
+</html>
