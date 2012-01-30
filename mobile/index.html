@@ -20,9 +20,12 @@
 
 	<div data-role="content" class="ui-content" role="main">
 		<h1>Simple, Reliable and Secure Messaging service</h1>	
+		<hr/>
 		<div class="ui-grid-a">
 			<div class="ui-block-a">
-				<p><a href="#popup" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a" class="ui-btn ui-btn-corner-all ui-shadow ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Features</span></span></a></p>
+				<p>
+				Bunch of features are waiting for you!
+				<a href="#features" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-up-a">Features</a></p>
 			</div>
 			<div class="ui-block-b"><p>You are one step away to reach your customers!<a href="#" title="SignUp">Signup For Free!</a></p></div>
 		</div><!-- /grid-a -->
@@ -38,8 +41,12 @@
 				<h3>Section 2</h3>
 				<p>I'm the collapsible set content for section B.</p>
 			</div>
-	
 		</div>
+		<!-- Collapsible End -->
+		
+		<!-- Call Button -->
+		<p><a href="tel:+8801743177334" data-role="button" data-theme="c" class="ui-corner-all">Call: +8801743177334</a></p>
+		<p><a href="mailto:evan@shajed.com" data-role="button" data-theme="c" class="ui-corner-all">Send Email</a></p>
 		
 	</div><!-- /content -->
 	
@@ -55,25 +62,26 @@
 
 </div><!-- /page -->
 
-<div data-role="dialog" id="popup" tabindex="0" data-transition="pop" class="ui-page ui-body-a ui-overlay-a ui-dialog" role="dialog" style="min-height: 320px; ">
-
-	<div data-role="header" data-theme="a" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-e" role="banner">
-	<a href="#" data-icon="delete" data-iconshadow="true" data-transition="pop" data-iconpos="left" title="Close" data-theme="a">
-		<span class="ui-btn-text">Close</span>
-	</a>
-		<h1 class="ui-title" tabindex="0" role="heading" aria-level="1">Ta-da!</h1>
+<!-- Page:#features  -->
+<div data-role="page" id="features" data-rel="dialog" data-theme="a">
+	<div data-role="header">
+		<h1>Header</h1>
 	</div>
+	<div data-role="content">
+		<h2>Use a different tile here keyword friendly</h2>
+		<ul>
+			<li>Feature One</li>
+			<li>Feature Two</li>
+			<li>Feature One</li>
+			<li>Feature Two</li>
+		</ul>
+		<p><a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="left" class="ui-corner-all ui-shadow ui-btn-up-a">Close</a></p>
+	</div>
+	<div data-role="footer"><h1>Footer</h1></div>
 
-	<div data-role="content" data-theme="a" class="ui-overlay-shadow ui-content ui-body-a" role="main">	
-		<h2>Popup</h2>
-		<p>Howdy</p>		
-		<p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back" data-theme="a" class="ui-btn ui-btn-inline ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-d"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Back to page "one"</span><span class="ui-icon ui-icon-back ui-icon-shadow"></span></span></a></p>	
-	</div><!-- /content -->
-	
-	<div data-role="footer" class="ui-overlay-shadow ui-corner-bottom ui-footer ui-bar-a" role="contentinfo">
-		<h4 class="ui-title" tabindex="0" role="heading" aria-level="1">Page Footer</h4>
-	</div><!-- /footer -->
 </div>
+
+
 <div class="ui-loader ui-body-a ui-corner-all" style="top: 335.5px; "><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
 
 </body>
