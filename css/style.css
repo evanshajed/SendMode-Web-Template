@@ -321,7 +321,7 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	float: right;
 	margin-top:-40px;
 	display: block;
-	width: 670px;
+	width: 675px;
 	/* Background color */
 	background: #094174; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#094174, #0E6399);
@@ -507,6 +507,11 @@ nav#headerNav .current_page_ancestor > a {
         border-style:solid;
         border-width:1px;
         }
+        
+        /* Conditonal Clases for Slider IE */
+        
+        .ie6 #slidedeck_frame a.slideButton:link,.ie7 #slidedeck_frame a.slideButton:link,.ie8 #slidedeck_frame a.slideButton:link{background:#41609c }
+        .ie6 #slidedeck_frame a.slideButton:hover,.ie7 #slidedeck_frame a.slideButton:hover,.ie8 #slidedeck_frame a.slideButton:hover, .ie6 #slidedeck_frame a.slideButton:active,.ie7 #slidedeck_frame a.slideButton:active,.ie8 #slidedeck_frame a.slideButton:active,.ie6 #slidedeck_frame a.slideButton:visited,.ie7 #slidedeck_frame a.slideButton:visited,.ie8 #slidedeck_frame a.slideButton:visited{background: #304670}
 	
 	/* main */
 	
@@ -520,7 +525,7 @@ nav#headerNav .current_page_ancestor > a {
 	box-shadow: 0px 0px 3px 0.4px #000000;
 	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
 	
-	.ie8 article.box, .ie8 section.box .ie8 aside.box{boder:1px solid #CCC;}
+	.ie8 article.box, .ie7 section.box, .ie6 aside.box{border:1px solid #CCC;}
 	
 	h1.title{
 		color: #FFF;
@@ -553,35 +558,10 @@ box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1);
 -webkit-border-radius: 16px;
 border-radius: 16px;
 text-align: center;
-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#1ee82d', endColorstr = '#26a13b');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#1ee82d', endColorstr = '#26a13b')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #1ee82d, #26a13b);
-background-image: -ms-linear-gradient(top, #1ee82d, #26a13b);
-background-image: -o-linear-gradient(top, #1ee82d, #26a13b);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#1ee82d), to(#26a13b));
-background-image: -webkit-linear-gradient(top, #1ee82d, #26a13b);
-background-image: linear-gradient(top, #1ee82d, #26a13b);
 /*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
 }
-a:hover.signup{filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#416b3e', endColorstr = '#11481b');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#416b3e', endColorstr = '#11481b')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #416b3e, #11481b);
-background-image: -ms-linear-gradient(top, #416b3e, #11481b);
-background-image: -o-linear-gradient(top, #416b3e, #11481b);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#416b3e), to(#11481b));
-background-image: -webkit-linear-gradient(top, #416b3e, #11481b);
-background-image: linear-gradient(top, #416b3e, #11481b);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+a:hover.signup{
+	background: #073768;
 }
 
 
