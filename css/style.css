@@ -333,6 +333,8 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	}
 	
+	.ie6 nav#headeNav{width:680px;}
+	
 	/* = Top Menu Navigation
 -------------------------------------------------------------- */
 nav#headerNav ul {
@@ -525,7 +527,7 @@ nav#headerNav .current_page_ancestor > a {
 	box-shadow: 0px 0px 3px 0.4px #000000;
 	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
 	
-	.ie8 article.box, .ie7 section.box, .ie6 aside.box{border:1px solid #CCC;}
+	.ie8 article.box, .ie8 section.box,.ie7 article.box, .ie7 section.box,.ie6 article.box, .ie6 section.box,{border:1px solid #CCC;}
 	
 	h1.title{
 		color: #FFF;
