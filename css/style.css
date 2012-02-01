@@ -527,7 +527,7 @@ nav#headerNav .current_page_ancestor > a {
 	box-shadow: 0px 0px 3px 0.4px #000000;
 	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
 	
-	.ie8 article.box, .ie8 section.box,.ie7 article.box, .ie7 section.box,.ie6 article.box, .ie6 section.box,{border:1px solid #CCC;}
+	.ie8 article.box, .ie8 section.box, .ie8 aside.box,.ie7 article.box, .ie7 section.box,.ie7 aside.box,.ie6 article.box, .ie6 section.box,ie6 aside.box{border:1px solid #CCC;}
 	
 	h1.title{
 		color: #FFF;
