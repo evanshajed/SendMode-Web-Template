@@ -277,7 +277,7 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	.pic_ireland{height:97px;width:98px;background: url(../images/flag_80.gif) no-repeat; display: block; overflow: hidden; text-indent: -99999px;}
 	
 	/* Global Segment */
-	body,ul#double,#features a,#sideNav,nav#headerNav{ -moz-border-radius: 5px;
+	body,ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
    border-radius: 5px;}
 	
@@ -308,51 +308,104 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
    #topContainer span.country:after{content:": ";}
 	
 	/* header segment */
-	#header h1 {display: inline-table;}
+	#header{ border-bottom: 3px solid #094174; margin-bottom: 1em;}
+	#header h1 {display: inline-table; margin-bottom: -3px;}
 	#header section.country{float: right;}
 	#header section.country h3{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
 	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
 	
 	/* top navigation */
+	
 	nav#headerNav{
-	width:60%;
-		float: right;
-		position: absolute;
-		margin-top: -70px;
-		margin-left: 320px;
-		-moz-box-shadow: inset 0px -1px #fffafa;
--webkit-box-shadow: inset 0px -1px #fffafa;
-box-shadow: inset 0px -1px #fffafa;
-/*Inner elements should not cover inner shadows*/
-/*IE 7 AND 8 DO NOT SUPPORT INSET SHADOWS*/
-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#565754', endColorstr = '#1b1c1a');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#565754', endColorstr = '#1b1c1a')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #565754, #1b1c1a);
-background-image: -ms-linear-gradient(top, #565754, #1b1c1a);
-background-image: -o-linear-gradient(top, #565754, #1b1c1a);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#565754), to(#1b1c1a));
-background-image: -webkit-linear-gradient(top, #565754, #1b1c1a);
-background-image: linear-gradient(top, #565754, #1b1c1a);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
+	padding: 0;
+	float: right;
+	margin-top:-40px;
+	display: block;
+	width: 670px;
+	/* Background color */
+	background: #094174; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174, #0E6399);
+	background: -o-linear-gradient(#094174, #0E6399);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#0E6399)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #0E6399);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	}
-
-nav#headerNav ul{	
-padding: 1em;
+	
+	/* = Top Menu Navigation
+-------------------------------------------------------------- */
+nav#headerNav ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0 0 0 -0.1em;
+	padding-left: 0;
 }
-nav#headerNav li{ padding: 1em 0.5em 1em 0.5em; display: inline; border-right: 1px dotted #999;}
-nav#headerNav li.login{background-color: #E6B73D;}
-nav#headerNav li:last-child{border-right: none; clear: right;}
-nav#headerNav li:hover{background: #5CB6E0;}
-nav#headerNav li a{color: #FFF; text-decoration: none;}
-nav#headerNav li a:hover{color: #333}
+nav#headerNav li {
+	float: left;
+	position: relative;
+	border-right: 1px dotted #999;
+}
+nav#headerNav li:last-child{border-right: none;}
+nav#headerNav a {
+	color: #eee;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+}
+nav#headerNav ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+nav#headerNav ul ul a {
+	background: #5BB5DF;
+	border-bottom: 1px dotted #ddd;
+	color: #EEE;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+nav#headerNav li:hover > a,
+nav#headerNav ul ul :hover > a,
+nav#headerNav a:focus {
+	background: #89d9ff;
+}
+nav#headerNav li:hover > a,
+nav#headerNav a:focus {
+	background: #5BB5DF; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174,#5BB5DF);
+	background: -o-linear-gradient(#094174,#5BB5DF);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#5BB5DF)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #5BB5DF);
+	color: #FFF;
+}
+nav#headerNav ul li:hover > ul {
+	display: block;
+}
+nav#headerNav .current_page_item > a,
+nav#headerNav .current_page_ancestor > a {
+	font-weight: bold;
+	background: #5BB5DF;
+}
 
-
-	/* Slider */
+	/* Content styles within slide deck */
 	#slidedeck_frame{
 		width: 650px;
 		height: 300px;
@@ -467,19 +520,24 @@ nav#headerNav li a:hover{color: #333}
 	box-shadow: 0px 0px 3px 0.4px #000000;
 	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
 	
+	.ie8 article.box, .ie8 section.box .ie8 aside.box{boder:1px solid #CCC;}
+	
 	h1.title{
 		color: #FFF;
 		font-size: 1.2em;
-		background-color: #7C8F93;
+		background-color: #0D588D;
 		height: 1.3em;
 		border-width: 1px;
 		border-color: #a6a09f;
+		/* Text Shadow */
+		text-shadow: 0px 1px 1px #2a0bd9;
+		filter: dropshadow(color=#2a0bd9, offx=0, offy=1);
 		-moz-border-radius: 10px 10px 0px 0px;
 		-webkit-border-radius: 10px 10px 0px 0px;
 		border-radius: 10px 10px 0px 0px;
-		-moz-box-shadow: inset 0px 0px 1px 0.4px #666;
-		-webkit-box-shadow: inset 0px 0px 1px 0.4px #666;
-		box-shadow: inset 0px 0px 1px 0.4px #666;
+		-webkit-box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1);
+-moz-box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1);
+box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1); 
 		padding: 0.5em 0.8em 0.5em 0.5em;
 	}
 	
@@ -539,7 +597,6 @@ background-image: linear-gradient(top, #416b3e, #11481b);
 
 	/* Aside */
 	
-	#recommendation{}
 	#recommendation ul{margin:0 auto; padding: 0.8em 0.5em 0.5em 1em; margin-bottom: 1.2em;}
 	#recommendation ul li{list-style: none; padding: 0;margin: 0 0 1.2em 0;}
 	#recommendation blockquote{margin: 0.3em 0.8em 0.5em 0.4em; color: #666; font-style: italic;}
@@ -547,97 +604,33 @@ background-image: linear-gradient(top, #416b3e, #11481b);
 	#recommendation a.more,#developerAPI a.more{ padding: 0.5em 0.8em 1.3em 0.8em;font-size:1em; display: block;}
 	
 	/* Side Nav */
-	#sideNav{ background: #92B628;}
 	#sideNav h1{margin-bottom: 0;}
 	#sideNav ul{margin: 0 auto; padding: 0px}
-	#sideNav ul li{ color: #999; font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none; padding: 0.5em;
+	#sideNav ul li{font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none;border-bottom: 1px solid #0D588D;
+	/* Box Shadow */
+	-moz-box-shadow: 0px 1px #ccc;
+	-webkit-box-shadow: 0px 1px #ccc;
+	box-shadow: 0px 1px #ccc;
 
-border-width: 1px;
-border-color: transparent;
--moz-box-shadow: 0px 1px #ccc;
--webkit-box-shadow: 0px 1px #ccc;
-box-shadow: 0px 1px #ccc;
-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#2f6e23', endColorstr = '#2f8035');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#2f6e23', endColorstr = '#2f8035')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #2f6e23, #2f8035);
-background-image: -ms-linear-gradient(top, #2f6e23, #2f8035);
-background-image: -o-linear-gradient(top, #2f6e23, #2f8035);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#2f6e23), to(#2f8035));
-background-image: -webkit-linear-gradient(top, #2f6e23, #2f8035);
-background-image: linear-gradient(top, #2f6e23, #2f8035);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
 }
-#sideNav ul li:hover{
-cursor:pointer;
-filter: progid: DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff8f7');
--ms-filter: "progid: DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#fff8f7')";
-/*Shadows look very different in IE (Only cardinal directions supported)*/
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element should have a background-color*/
-/*All filters must be placed together*/
-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#335233', endColorstr = '#245216');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#335233', endColorstr = '#245216')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #335233, #245216);
-background-image: -ms-linear-gradient(top, #335233, #245216);
-background-image: -o-linear-gradient(top, #335233, #245216);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#335233), to(#245216));
-background-image: -webkit-linear-gradient(top, #335233, #245216);
-background-image: linear-gradient(top, #335233, #245216);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/}
-	#sideNav ul li a{text-decoration: none;color: #FFF}
+	#sideNav ul li a{text-decoration: none;color: #FFF; display:block;padding: 0.5em;background: #2881bf;}
+	#sideNav ul li a:hover{background: #65B0D3; cursor: pointer;}
 	
 	/* Free Trial and Blog Segment */
-	#sideNav ul li.freeTrial,#sideNav ul li.blog{
+	#sideNav ul li.freeTrial a,#sideNav ul li.blog a{
 		background-color: #c92716;
-border-width: 2px;
-border-color: #999999;
-filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#9c3317', endColorstr = '#6e0c06');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#9c3317', endColorstr = '#6e0c06')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #9c3317, #6e0c06);
-background-image: -ms-linear-gradient(top, #9c3317, #6e0c06);
-background-image: -o-linear-gradient(top, #9c3317, #6e0c06);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#9c3317), to(#6e0c06));
-background-image: -webkit-linear-gradient(top, #9c3317, #6e0c06);
-background-image: linear-gradient(top, #9c3317, #6e0c06);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
-}
+		border-width: 1px;
+		border-color: #999999;
+	}
 
-	#sideNav ul li.freeTrial:hover,#sideNav ul li.blog:hover{
-	cursor: default;
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr = '#c92c1c', endColorstr = '#cf3d2d');
-/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
--ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr = '#c92c1c', endColorstr = '#cf3d2d')";
-/*Element must have a height (not auto)*/
-/*All filters must be placed together*/
-background-image: -moz-linear-gradient(top, #c92c1c, #cf3d2d);
-background-image: -ms-linear-gradient(top, #c92c1c, #cf3d2d);
-background-image: -o-linear-gradient(top, #c92c1c, #cf3d2d);
-background-image: -webkit-gradient(linear, center top, center bottom, from(#c92c1c), to(#cf3d2d));
-background-image: -webkit-linear-gradient(top, #c92c1c, #cf3d2d);
-background-image: linear-gradient(top, #c92c1c, #cf3d2d);
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/}
-	#sideNav ul li.freeTrial:before{content: url("../images/sign_up.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	#sideNav ul li.freeTrial a:hover,#sideNav ul li.blog a:hover{
+	cursor:pointer;
+	background: #F98416;
+	}
+	#sideNav ul li.freeTrial a:before{content: url("../images/sign_up.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
 	
-	#sideNav ul li.blog:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	#sideNav ul li.blog a:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
 	
-	#developerAPI{}
 	#developerAPI p{float: left; margin-right: 5px; display:inline-table; width: 30%; padding: 0.3em 0.3em 1em 1em;}
 	#developerAPI span{}
 
