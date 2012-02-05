@@ -10,12 +10,12 @@
 	<script src="js/jquery.mobile-1.0.1.min.js"></script>
 </head> 
 <body class="ui-mobile-viewport"> 
-
-<div data-role="page" id="one" tabindex="0" class="ui-page">
+<div data-role="page" id="one" tabindex="0" class="ui-page" id="home">
 
 	<div data-role="header" data-position="fixed" role="banner">
 		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
 			<h1>SendMode</h1>
+			<a href="dnav.html" data-role="button" data-rel="dialog" data-transition="pop" data-icon="gear" data-theme="c" class="ui-corner-all" data-iconpos="notext">Links</a>
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content" role="main">
@@ -27,23 +27,35 @@
 		<h4>
 			Bunch of features are waiting for you!
 		</h4>
-		<a href="#features" data-role="button" data-rel="dialog" data-transition="pop" data-theme="d" class="ui-corner-all">What's Included?</a>
+		<a href="dfeatures.html" data-role="button" data-rel="dialog" data-transition="pop" data-theme="c" class="ui-corner-all">What's Included?</a>
 		</div>
 		
 		<div data-role="collapsible-set" data-theme="d" data-content-theme="a">
 
-			<div data-role="collapsible">
+			<div data-role="collapsible" class="ColSection">
 				<h3>Web Text</h3>
-				<p>I'm the collapsible set content for section B.</p>
-				<section id="BulkSMS">
-					<img src="images/sms.png" class="sms" title="Bulk SMS">
-					<p class="right">SendMode offers the best and lowest cost Bulk SMS Text Messaging Product on the market with a number of business specific features unique to SendMode such as Birthday SMS and Twitter\Facebook Integrator. We build the features that you, the business owners require to to get more customers through your doors!!! That's why we create features to help achieve this.</P>
-				</section>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<img src="images/sms.png" class="sms" title="Bulk SMS" >
+					</div>
+					<div class="ui-block-b">
+						<h4>Bulk SMS Text Messaging for Business</h4>
+					</div>
+				</div>
+				<p><strong>SendMode</strong> offers the best and <strong>lowest cost Bulk SMS Text Messaging Product</strong> on the market with a number of business specific features unique to SendMode such as Birthday SMS and Twitter\Facebook Integrator. We build the features that you, the business owners require to to get more customers through your doors!!! That's why we create features to help achieve this.</p>
 			</div>
 
-			<div data-role="collapsible">
+			<div data-role="collapsible" class="ColSection">
 				<h3>SMS Short Codes</h3>
-				<p>I'm the collapsible set content for section B.</p>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<img src="images/email_open.png" alt="SMS Short Codes" title="Bulk SMS" >
+					</div>
+					<div class="ui-block-b">
+						<h4>Text Compitition</h4>
+					</div>
+				</div>
+				<p>Text Competitions are a great way to engage with new and existing customers. Sendmode assigns a exclusive keyword on 51444 to your company ( for example WORLDCUP below ) and you can then run text competitions in all your advertising channels.</p>
 			</div>
 	
 			<div data-role="collapsible">
@@ -62,34 +74,14 @@
 	<div data-role="footer"> 
 		<nav data-role="navbar">
 			<ul>
-				<li><a href="mfeatures.html" title="title" data-theme="d">Features</a></a></li>
-				<li><a href="mprice.html" title="title" data-theme="d">Price</a></li>
-				<li><a href="mcontact.html" title="title" data-theme="d">Contact</a></li>
+				<li><a href="mfeatures.html" title="title" rel="external" data-theme="d">Features</a></li>
+				<li><a href="mprice.html" title="title" rel="external" data-theme="d">Price</a></li>
+				<li><a href="mcontact.html" title="title" rel="external" data-theme="d">Contact</a></li>
 			</ul>
 		</nav>
 	</div>
 
 </div><!-- /page -->
-
-<!-- Page:#features  -->
-<div data-role="page" id="features" data-rel="dialog" data-theme="d">
-	<div data-role="header">
-		<h1>Header</h1>
-	</div>
-	<div data-role="content">
-		<h2>Use a different tile here keyword friendly</h2>
-		<ul>
-			<li>Feature One</li>
-			<li>Feature Two</li>
-			<li>Feature One</li>
-			<li>Feature Two</li>
-		</ul>
-		<p><a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="left" class="ui-corner-all ui-shadow ui-btn-up-d">Close</a></p>
-	</div>
-	<div data-role="footer"><h1>Footer</h1></div>
-
-</div>
-
 
 <div class="ui-loader ui-body-a ui-corner-all" style="top: 335.5px; "><span class="ui-icon ui-icon-loading spin"></span><h1>loading</h1></div>
 

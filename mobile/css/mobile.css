@@ -1,3 +1,7 @@
+.actionGrid h4{
+	color:#083061;
+}
+.actionGrid{padding-bottom:2em;}
 .box{padding-bottom: 1em; margin-bottom: 1em;}
 span#call{margin-top: 3em;}
 /* Style for Custom Email and Phone Icon */
@@ -7,4 +11,11 @@ span#call{margin-top: 3em;}
 .ui-icon-email{}
 .ui-icon-phone-touch{}
 .sms{ margin:0 0.8em 1em 0; flaot:left;}
-#BulkSMS p{margin:0px; padding: 0px;}
+.ColSection h4{margin-top:0.6em;}
+.ColSection img{width:100%;}
+.ColSection .ui-grid-a {border-bottom:1px solid #DDDDDD;}
+.ColSection .ui-grid-a .ui-block-a{ width:30%;}
+.ColSection .ui-grid-a .ui-block-b{ width:70%;}
+#contact h4{
+}
+#contact span{ clear:both;}
