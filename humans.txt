@@ -3,41 +3,25 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
 
-/* THANKS */
-  Names (& URL): 
+  Project Consultant: John McNamara
+  Site: http://sendmode.com/
+  Location: Ireland
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
+  UX/UI Expert: Shajed Evan
+  Site: http://behance.net/evanshajed 
+  Twitter: @evanshajed
+  Location: Dhaka, Bangladesh
   
 
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        
+/* THANKS */
+  Names: HTML5 BoilerPlate Team
+  twitter: @https://twitter.com/h5bp 
+
+/* SITE */
+  Last Update:2012/02/03
+  Language: English
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software:Coda,Photoshop                 
+                           

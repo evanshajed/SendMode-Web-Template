@@ -3,11 +3,11 @@
 	<head> 
 	<title>SendMode</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="themes/sendmode-mobile-theme.min.css" />
+	<link rel="stylesheet" href="themes/SendModeTheme2.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.0.1.min.css" />
 	<link rel="stylesheet" href="css/mobile.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css" />
-		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
 </head> 
 <body class="ui-mobile-viewport"> 
 
@@ -15,47 +15,56 @@
 
 	<div data-role="header" data-position="fixed" role="banner">
 		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
-		<h1>SendMode</h1>
+			<h1>SendMode</h1>
 	</div><!-- /header -->
 
 	<div data-role="content" class="ui-content" role="main">
 		<h1>Simple, Reliable and Secure Messaging service</h1>	
 		<hr/>
-		<div class="ui-grid-a">
-			<div class="ui-block-a">
-				<p>
-				Bunch of features are waiting for you!
-				<a href="#features" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a" class="ui-btn ui-corner-all ui-shadow ui-btn-up-a">Features</a></p>
-			</div>
-			<div class="ui-block-b"><p>You are one step away to reach your customers!<a href="#" title="SignUp">Signup For Free!</a></p></div>
-		</div><!-- /grid-a -->
 		
-		<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+		<!-- Action Segment -->
+		<div class="actionGrid">
+		<h4>
+			Bunch of features are waiting for you!
+		</h4>
+		<a href="#features" data-role="button" data-rel="dialog" data-transition="pop" data-theme="d" class="ui-corner-all">What's Included?</a>
+		</div>
+		
+		<div data-role="collapsible-set" data-theme="d" data-content-theme="a">
 
 			<div data-role="collapsible">
-				<h3>Section 1</h3>
+				<h3>Web Text</h3>
+				<p>I'm the collapsible set content for section B.</p>
+				<section id="BulkSMS">
+					<img src="images/sms.png" class="sms" title="Bulk SMS">
+					<p class="right">SendMode offers the best and lowest cost Bulk SMS Text Messaging Product on the market with a number of business specific features unique to SendMode such as Birthday SMS and Twitter\Facebook Integrator. We build the features that you, the business owners require to to get more customers through your doors!!! That's why we create features to help achieve this.</P>
+				</section>
+			</div>
+
+			<div data-role="collapsible">
+				<h3>SMS Short Codes</h3>
 				<p>I'm the collapsible set content for section B.</p>
 			</div>
 	
 			<div data-role="collapsible">
-				<h3>Section 2</h3>
+				<h3>Sec</h3>
 				<p>I'm the collapsible set content for section B.</p>
 			</div>
 		</div>
 		<!-- Collapsible End -->
 		
 		<!-- Call Button -->
-		<p><a href="tel:+8801743177334" data-role="button" data-theme="c" class="ui-corner-all">Call: +8801743177334</a></p>
-		<p><a href="mailto:evan@shajed.com" data-role="button" data-theme="c" class="ui-corner-all">Send Email</a></p>
+		<p><a href="tel:+8801743177334" data-role="button" data-icon="phone-touch" data-iconpos="right" data-theme="c" class="ui-corner-all">Call: +8801743177334</a></p>
+		<p><a href="mailto:evanshajed@gmail.com" data-role="button" data-icon="email" data-iconpos="right"  data-theme="c" class="ui-corner-all">Send Email</a></p>
 		
 	</div><!-- /content -->
 	
 	<div data-role="footer"> 
 		<nav data-role="navbar">
 			<ul>
-				<li><a href="#" title="title" data-theme="a">One</a></li>
-				<li><a href="#" title="title" data-theme="b">One</a></li>
-				<li><a href="#" title="title" data-theme="c">One</a></li>
+				<li><a href="mfeatures.html" title="title" data-theme="d">Features</a></a></li>
+				<li><a href="mprice.html" title="title" data-theme="d">Price</a></li>
+				<li><a href="mcontact.html" title="title" data-theme="d">Contact</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -63,7 +72,7 @@
 </div><!-- /page -->
 
 <!-- Page:#features  -->
-<div data-role="page" id="features" data-rel="dialog" data-theme="a">
+<div data-role="page" id="features" data-rel="dialog" data-theme="d">
 	<div data-role="header">
 		<h1>Header</h1>
 	</div>
@@ -75,7 +84,7 @@
 			<li>Feature One</li>
 			<li>Feature Two</li>
 		</ul>
-		<p><a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="left" class="ui-corner-all ui-shadow ui-btn-up-a">Close</a></p>
+		<p><a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="left" class="ui-corner-all ui-shadow ui-btn-up-d">Close</a></p>
 	</div>
 	<div data-role="footer"><h1>Footer</h1></div>
 

@@ -32,10 +32,3 @@ function setHeight(column) {
     //Set the height
     column.height(maxHeight);
 }
-
-
-
-
-
-
-

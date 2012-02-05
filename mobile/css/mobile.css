@@ -1,2 +1,10 @@
 .box{padding-bottom: 1em; margin-bottom: 1em;}
 span#call{margin-top: 3em;}
+/* Style for Custom Email and Phone Icon */
+.ui-icon-email,.ui-icon-phone-touch{
+	
+}
+.ui-icon-email{}
+.ui-icon-phone-touch{}
+.sms{ margin:0 0.8em 1em 0; flaot:left;}
+#BulkSMS p{margin:0px; padding: 0px;}
