@@ -258,8 +258,10 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	background-repeat:no-repeat;
 	display:block;
 	text-indent:-99999px;
+	text-transform: capitalize;
 	overflow:hidden;
 	}
+	
 
 	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
 	.flag_125{height:12px;width:16px;background-position:-533px 0;}
@@ -277,24 +279,27 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	.pic_ireland{height:97px;width:98px;background: url(../images/flag_80.gif) no-repeat; display: block; overflow: hidden; text-indent: -99999px;}
 	
 	/* Global Segment */
-	body,ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
+	ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
-   border-radius: 5px;}
+   border-radius: 5px;
+   -khtml-border-radius:5px;
+   behavior: url(PIE.htc);
+   }
 	
 	/* body segment */	
    body{background:#0E6399 url("../images/background.gif") repeat-x;}
+   
    #container{background-color: #ffffff;
-   border-width: 1px;
-   border-color: #8a8a8a;
+   border: 1px solid #8A8A8A;
    -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
    border-radius: 5px;
-   /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
    -moz-box-shadow: 0px 0px 3px #000000;
    -webkit-box-shadow: 0px 0px 3px #000000;
    box-shadow: 0px 0px 3px #000000;
-   /*IE 7 AND 8 DO NOT SUPPORT BLUR PROPERTY OF SHADOWS*/}
-   
+   position: relative;
+   behavior: url(PIE.htc);
+   }
    
    
    /* topContainer segment */
@@ -309,8 +314,19 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	
 	/* header segment */
 	#header{ border-bottom: 3px solid #094174; margin-bottom: 1em;}
-	#header h1 {display: inline-table; margin-bottom: -3px;}
-	#header section.country{float: right;}
+	#header h1 {display:inline-block; margin-bottom: -3px}
+	.ie7 #header a h1{
+		display:block;
+		background-image:url(../images/sprite.png);
+		background-repeat:no-repeat;
+		height:75px;width:180px;background-position:-224px -98px;
+		display:block;
+		text-indent:-99999px;
+		text-transform: capitalize;
+		overflow:hidden;
+	}
+	#header section.country{float: right; display: inline-block; vertical-align:top;}
+	.ie7 #header section.country{*display:inline; zoom:1; margin-top: -80px;}
 	#header section.country h3{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
 	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
 	
@@ -321,7 +337,7 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	float: right;
 	margin-top:-40px;
 	display: block;
-	width: 675px;
+	width: 671px;
 	/* Background color */
 	background: #094174; /* Show a solid color for older browsers */
 	background: -moz-linear-gradient(#094174, #0E6399);
@@ -331,16 +347,19 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	position: relative;
+	z-index: 0;
+	behavior: url(PIE.htc);
 	}
 	
-	.ie6 nav#headeNav{width:680px;}
+	.ie6 nav#headeNav,.ie7 nav#headeNav,.ie8 nav#headerNav{width:680px;}
 	
 	/* = Top Menu Navigation
 -------------------------------------------------------------- */
 nav#headerNav ul {
 	font-size: 13px;
 	list-style: none;
-	margin: 0 0 0 -0.1em;
+	margin: 0 0 0 0;
 	padding-left: 0;
 }
 nav#headerNav li {
@@ -353,7 +372,7 @@ nav#headerNav a {
 	color: #eee;
 	display: block;
 	line-height: 3.333em;
-	padding: 0 1.2125em;
+	padding: 0 1.240em;
 	text-decoration: none;
 }
 nav#headerNav ul ul {
@@ -396,6 +415,7 @@ nav#headerNav a:focus {
 	background: -o-linear-gradient(#094174,#5BB5DF);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#5BB5DF)); /* Older webkit syntax */
 	background: -webkit-linear-gradient(#094174, #5BB5DF);
+	behavior: url(http://examples.iamwebsitedeveloper.com/john/css/PIE.htc);
 	color: #FFF;
 }
 nav#headerNav ul li:hover > ul {
@@ -406,16 +426,35 @@ nav#headerNav .current_page_ancestor > a {
 	font-weight: bold;
 	background: #5BB5DF;
 }
+nav#headerNav .login > a{
+	background: #9BBE35;
+	background: -moz-linear-gradient(#9BBE35,#548E18);
+	background: -o-linear-gradient(#9BBE35,#548E18);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9BBE35), to(#548E18)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#9BBE35, #548E18);
+	-pie-background: linear-gradient(#9BBE35, #548E18); /*PIE*/
+	behavior: url(PIE.htc);
+}
+nav#headerNav .login > a:hover{
+	color: #FFF;
+	background: #C13A2C;
+	background: -moz-linear-gradient(#C13A2C,#F96D1B);
+	background: -o-linear-gradient(#C13A2C,#0AF056);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C13A2C), to(#F96D1B)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#C13A2C, #F96D1B);
+	behavior: url(PIE.htc);
+}
 
-	/* Content styles within slide deck */
+	/* Content styles within slide deck and Slide Scroll Styling */
 	#slidedeck_frame{
 		width: 650px;
 		height: 300px;
+		margin-bottom: 2em;
 	}
 	#slidedeck_frame img.slideContent{float: left; padding-right: 2em;}
 	#slidedeck_frame h3{font-size: 2em;}
-	#slidedeck_frame a.slideButton:link{
-        border-color:#dedede;
+	#slidedeck_frame a.slideButton{
+		border:1px solid #dedede;
         -moz-border-radius:8px;
         -webkit-border-radius:8px;
         border-radius:8px;
@@ -429,138 +468,214 @@ nav#headerNav .current_page_ancestor > a {
         -webkit-box-shadow:1px 1px 2px #242324;
         -moz-box-shadow:1px 1px 2px #242324;
         font-family:Helvetica;
+        background: #41609c;
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        behavior: url(PIE.htc);
+	}
+	#slidedeck_frame a.slideButton:link{
         background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
         background: -moz-linear-gradient(#6397ff, #41609c);
         background: linear-gradient(#6397ff, #41609c);
-        padding:5px 15px;
-        text-shadow:#262e4d 0px 1px 0px;
-        border-style:solid;
-        border-width:1px;
+        behavior: url(PIE.htc);
         }
 
 #slidedeck_frame a.slideButton:hover{
-        border-color:#dedede;
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;
-        border-radius:8px;
-        color:#ffffff;
-        font-size:16px;
-        font-style:normal;
-        text-decoration:none;
-        text-transform:capitalize;
-        letter-spacing:1px;
-        box-shadow:1px 1px 2px #242324;
-        -webkit-box-shadow:1px 1px 2px #242324;
-        -moz-box-shadow:1px 1px 2px #242324;
-        font-family:Helvetica;
+        background: #304670;
         background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3f61a6), to(#304670));
         background: -moz-linear-gradient(#3f61a6, #304670);
         background: linear-gradient(#3f61a6, #304670);
-        padding:5px 15px;
-        text-shadow:#262e4d 0px 1px 0px;
-        border-style:solid;
-        border-width:1px;
+        behavior: url(PIE.htc);
         }
 
 #slidedeck_frame a.slideButton:active{
-        border-color:#dedede;
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;
-        border-radius:8px;
-        color:#ffffff;
-        font-size:16px;
-        font-style:normal;
-        text-decoration:none;
-        text-transform:capitalize;
-        letter-spacing:1px;
-        box-shadow:1px 1px 2px #242324;
-        -webkit-box-shadow:1px 1px 2px #242324;
-        -moz-box-shadow:1px 1px 2px #242324;
-        font-family:Helvetica;
+       
+        background: #304670;
         background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
         background: -moz-linear-gradient(#6397ff, #41609c);
         background: linear-gradient(#6397ff, #41609c);
-        padding:5px 15px;
-        text-shadow:#262e4d 0px 1px 0px;
-        border-style:solid;
-        border-width:1px;
+        behavior: url(PIE.htc);
         }
 
 #slidedeck_frame a.slideButton:visited{
-        border-color:#dedede;
-        -moz-border-radius:8px;
-        -webkit-border-radius:8px;
-        border-radius:8px;
-        color:#ffffff;
-        font-size:16px;
-        font-style:normal;
-        text-decoration:none;
-        text-transform:capitalize;
-        letter-spacing:1px;
-        box-shadow:1px 1px 2px #242324;
-        -webkit-box-shadow:1px 1px 2px #242324;
-        -moz-box-shadow:1px 1px 2px #242324;
-        font-family:Helvetica;
+      
+        background: #304670;
         background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
         background: -moz-linear-gradient(#6397ff, #41609c);
         background: linear-gradient(#6397ff, #41609c);
-        padding:5px 15px;
-        text-shadow:#262e4d 0px 1px 0px;
-        border-style:solid;
-        border-width:1px;
+        behavior: url(PIE.htc);
         }
         
         /* Conditonal Clases for Slider IE */
         
-        .ie6 #slidedeck_frame a.slideButton:link,.ie7 #slidedeck_frame a.slideButton:link,.ie8 #slidedeck_frame a.slideButton:link{background:#41609c }
-        .ie6 #slidedeck_frame a.slideButton:hover,.ie7 #slidedeck_frame a.slideButton:hover,.ie8 #slidedeck_frame a.slideButton:hover, .ie6 #slidedeck_frame a.slideButton:active,.ie7 #slidedeck_frame a.slideButton:active,.ie8 #slidedeck_frame a.slideButton:active,.ie6 #slidedeck_frame a.slideButton:visited,.ie7 #slidedeck_frame a.slideButton:visited,.ie8 #slidedeck_frame a.slideButton:visited{background: #304670}
+        .ie6 #slidedeck_frame a.slideButton:link,.ie7 #slidedeck_frame a.slideButton:link,.ie8 #slidedeck_frame a.slideButton:link{background:#41609c;}
+        .ie6 #slidedeck_frame a.slideButton:hover,.ie7 #slidedeck_frame a.slideButton:hover,.ie8 #slidedeck_frame a.slideButton:hover, .ie6 #slidedeck_frame a.slideButton:active,.ie7 #slidedeck_frame a.slideButton:active,.ie8 #slidedeck_frame a.slideButton:active,.ie6 #slidedeck_frame a.slideButton:visited,.ie7 #slidedeck_frame a.slideButton:visited,.ie8 #slidedeck_frame a.slideButton:visited{background: #304670;}
+        
+    .skin-slidedeck {
+    position: relative;
+	padding: 11px 11px 24px;
+    background: url('../images/back.png') 0 0 #d7d7d7;
+    border: 14px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/*
+ * The SlideDeck element itself.
+ * 
+ * Customize the width and height to increase or decrease the size of
+ * your SlideDeck. 
+ */
+.skin-slidedeck dl.slidedeck {
+    position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+
+.skin-slidedeck dl.slidedeck > dd {
+    position: relative;
+	height: 294px;
+	padding: 10px 15px;
+    margin: 0;
+	border-right: 5px solid #d7d7d7;
+	background: url('../images/slides.png') bottom left #d7d7d7;    /* Note: you should position the background with pixel measurements in IE7 as it improperly calculates the height of the DD element when containing vertical slides */
+    overflow: hidden;
+}
+
+
+.skin-slidedeck dl.slidedeck > dt {
+    position: relative;
+	cursor: pointer;
+	height: 43px;
+	line-height: 38px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Futura Bold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: url('../images/spines.png') top left #d7d7d7;
+	color: #505050;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * The hovered state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover {
+	color: #000;
+	background-position: center left;
+}
+
+/*
+ * The active state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active,
+.skin-slidedeck dl.slidedeck dt.spine.active:hover {
+	cursor: default;
+	color: #fff;
+	background-position: bottom left;
+}
+
+/*
+ * The SlideDeck spine index labels.
+ * 
+ * This is to style the numbers (or letters if you have customized it so)
+ * that appear at the bottom of each SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine .index {
+	margin-bottom: 2px;
+    font-size: 24px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #505050;
+}
+.skin-slidedeck dl.slidedeck dt.spine.active .index { margin-bottom: 0; }
+
+/*
+ * The hovered state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover .index { color: #000000; }
+
+/*
+ * The active state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active .index { color: #ffffff; }
+
+/*
+ * The SlideDeck "active corner".
+ * 
+ * This is the small triangle that appears in the upper left of the active
+ * slide. This can be made any size and positioned differently by modifying
+ * the margin values. By default the left margin is inset to prevent any
+ * gap from appearing as the SlideDeck animates.
+ */
+.skin-slidedeck dl.slidedeck .activeCorner {
+	margin-left: -6px;
+	background-image: url('../images/corner.png');
+	width: 12px;
+	height: 25px;
+}
 	
 	/* main */
 	
 	.box{
-	border-bottom: 1px solid #CCC;
+	margin-bottom: 1em;
+	z-index: 0px;
+	position: relative;
+	border: 1px solid #CCC;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	-moz-box-shadow: 0px 0px 3px 0.4px #000000;
-	-webkit-box-shadow: 0px 0px 3px 0.4px #000000;
-	box-shadow: 0px 0px 3px 0.4px #000000;
-	/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/}
+	behavior: url(PIE.htc);
+	-khtml-border-radius:10px;
+	-moz-box-shadow: 0px 1px 1px 0.8px #DDD;
+	-webkit-box-shadow: 0px 1px 2px 0.8px #DDD;
+	box-shadow: 0px 1px 1px 0.8px #DDD;
+	behavior: url(PIE.htc);
+	}
 	
-	.ie8 article.box, .ie8 section.box, .ie8 aside.box,.ie7 article.box, .ie7 section.box,.ie7 aside.box,.ie6 article.box, .ie6 section.box,ie6 aside.box{border:1px solid #CCC;}
+	.ie8 article.box, .ie8 section.box, .ie8 aside.box,.ie7 article.box, .ie7 section.box,.ie7 aside.box,.ie6 article.box, .ie6 section.box,.ie6 aside.box{
+	-ms-filter: /* IE8+ */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";filter: /* IE<8 */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";
+	}
+	.ie7 .box,.ie8 .box{background: #FFFFFF;}
 	
 	h1.title{
 		color: #FFF;
+		z-index: 0px;
+		position: relative;
 		font-size: 1.2em;
-		background-color: #0D588D;
-		height: 1.3em;
-		border-width: 1px;
-		border-color: #a6a09f;
-		/* Text Shadow */
-		text-shadow: 0px 1px 1px #2a0bd9;
-		filter: dropshadow(color=#2a0bd9, offx=0, offy=1);
+		padding: 0.5em 0.8em 0.5em 0.5em;
+		margin: 0;
+		background:#0D588D;
 		-moz-border-radius: 10px 10px 0px 0px;
 		-webkit-border-radius: 10px 10px 0px 0px;
 		border-radius: 10px 10px 0px 0px;
-		-webkit-box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1);
--moz-box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1);
-box-shadow: inset 0px -1px 1px 0px rgba(125, 184, 226, 1); 
-		padding: 0.5em 0.8em 0.5em 0.5em;
+		-pie-border-radius:10px 10px 0px 0px;
+		behavior: url(PIE.htc);
+		-khtml-border-radius:10px 10px 0px 0px;
+		-webkit-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		-moz-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		box-shadow: inset 0px -1px 1px 0px #1CAFBF;
 	}
-	
+		
 	h1.title:before,ul#double li:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
 	
 	.box p, .box section{padding: 1em;}
 	
-	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;}
+	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;z-index: 0px;
+	position: relative;}
 	ul#double li{ line-height: 1.5em; float: left; display: inline; width: 50%;}
 	
 	span#button{ margin-left: 30%; margin-top: 5%; display: inline-table;}
 	a.signup{font-size: 1.5em; font-weight: 700; text-transform: capitalize; text-decoration: none;color: #FFF;padding: .3em .5em; background: #85B63A; border: 2px solid #CCC;-moz-border-radius: 16px;
 -webkit-border-radius: 16px;
 border-radius: 16px;
+behavior: url(PIE.htc);
 text-align: center;
-/*--IE9 DOES NOT SUPPORT GRADIENT BACKGROUNDS--*/
 }
 a:hover.signup{
 	background: #073768;
@@ -569,10 +684,11 @@ a:hover.signup{
 
 	/* Fatures segment */
 	#features{padding-bottom: 0.8em;}
-	#features a{display: inline-table; width: 15%; background-color:#EEE; border: 1px solid #CCC; padding: 5px 8px 5px 8px; cursor: pointer; text-align: center; margin-left:5px;}
-	#features span{margin-bottom: 10px;}
+	#features a{display: inline-block; display: -moz-inline-stack; width: 16%; min-height: 132px; background-color:#EEE; border: 1px solid #CCC; padding: 5px 8px 5px 8px; cursor: pointer; text-align: center; margin-left:5px; margin-top: 1em; vertical-align: top;}
+	#features span{margin-bottom: 10px; margin-right: 5px;}
 	#features a:hover{background-color: #CCC;}
 	
+	.ie7 #features a{zoom: 1;*display:inline;_height:132px}
 	
 
 
@@ -586,6 +702,7 @@ a:hover.signup{
 	#recommendation a.more,#developerAPI a.more{ padding: 0.5em 0.8em 1.3em 0.8em;font-size:1em; display: block;}
 	
 	/* Side Nav */
+	#sideNav{margin-bottom: 1em;}
 	#sideNav h1{margin-bottom: 0;}
 	#sideNav ul{margin: 0 auto; padding: 0px}
 	#sideNav ul li{font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none;border-bottom: 1px solid #0D588D;
@@ -593,6 +710,7 @@ a:hover.signup{
 	-moz-box-shadow: 0px 1px #ccc;
 	-webkit-box-shadow: 0px 1px #ccc;
 	box-shadow: 0px 1px #ccc;
+	behavior: url(PIE.htc);
 
 }
 	#sideNav ul li a{text-decoration: none;color: #FFF; display:block;padding: 0.5em;background: #2881bf;}
@@ -614,7 +732,7 @@ a:hover.signup{
 	#sideNav ul li.blog a:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
 	
 	#developerAPI p{float: left; margin-right: 5px; display:inline-table; width: 30%; padding: 0.3em 0.3em 1em 1em;}
-	#developerAPI span{}
+	#developerAPI span{margin-top: 1em;}
 
 
 	/* Footer */
@@ -632,6 +750,7 @@ a:hover.signup{
 	span#CopyRight{margin: 0 auto; padding: 1em 0 1em 0; display: block;}
 	span#CopyRight a{color: #BBB;}
 	span#CopyRight a:hover{color: #FFF;}
+
 	
 
 /* =============================================================================
