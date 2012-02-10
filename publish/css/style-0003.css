@@ -1,0 +1,1664 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #063163; color: #fff; text-shadow: none; }
+::selection { background: #063163; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #063163; }
+a:visited { color: #063163; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; color: #0E6298; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* #Base 960 Grid
+Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .column, .columns                           { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .row                                        { margin-bottom: 20px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column                      { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+
+    /* Offsets */
+    .container .offset-by-one                   { padding-left: 60px;  }
+    .container .offset-by-two                   { padding-left: 120px; }
+    .container .offset-by-three                 { padding-left: 180px; }
+    .container .offset-by-four                  { padding-left: 240px; }
+    .container .offset-by-five                  { padding-left: 300px; }
+    .container .offset-by-six                   { padding-left: 360px; }
+    .container .offset-by-seven                 { padding-left: 420px; }
+    .container .offset-by-eight                 { padding-left: 480px; }
+    .container .offset-by-nine                  { padding-left: 540px; }
+    .container .offset-by-ten                   { padding-left: 600px; }
+    .container .offset-by-eleven                { padding-left: 660px; }
+    .container .offset-by-twelve                { padding-left: 720px; }
+    .container .offset-by-thirteen              { padding-left: 780px; }
+    .container .offset-by-fourteen              { padding-left: 840px; }
+    .container .offset-by-fifteen               { padding-left: 900px; }
+
+/* =============================================================================
+   Primary styles
+   Author: Shajed Evan http://www.behance.net/evanshajed
+   ========================================================================== */
+   
+   /* Sprite images */
+   
+   .sendmode{
+	background-image:url(../images/sprite.png);
+	background-repeat:no-repeat;
+	display:block;
+	text-indent:-99999px;
+	text-transform: capitalize;
+	overflow:hidden;
+	}
+	
+
+	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
+	.flag_125{height:12px;width:16px;background-position:-533px 0;}
+	.flag_160{height:12px;width:16px;background-position:-533px -12px;}
+	.flag_183{height:12px;width:16px;background-position:-533px -24px;}
+	.flag_9{height:12px;width:16px;background-position:-533px -36px;}
+	.flag_italy{height:16px;width:16px;background-position:-533px -48px;}
+	.icon_1{height:90px;width:112px;background-position:0 -98px;}
+	.icon_2{height:90px;width:112px;background-position:0 -188px;}
+	.icon_3{height:90px;width:112px;background-position:0 -278px;}
+	.icon_4{height:90px;width:112px;background-position:0 -368px;}
+	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
+	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
+	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
+	.pic_ireland{height:97px;width:98px;background: url(../images/flag_80.gif) no-repeat; display: block; overflow: hidden; text-indent: -99999px;}
+	
+	/* Global Segment */
+	ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   -khtml-border-radius:5px;
+   behavior: url(PIE.htc);
+   }
+	
+	/* body segment */	
+   body{background:#0E6399 url("../images/background.gif") repeat-x;}
+   
+   #container{background-color: #ffffff;
+   border: 1px solid #8A8A8A;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   -moz-box-shadow: 0px 0px 3px #000000;
+   -webkit-box-shadow: 0px 0px 3px #000000;
+   box-shadow: 0px 0px 3px #000000;
+   position: relative;
+   behavior: url(PIE.htc);
+   }
+   
+   
+   /* topContainer segment */
+   #topContainer{ text-align: right; padding-right: 1em; margin-bottom: 1em; margin-top: 1em;}
+   #topContainer h1,#topContainer p{display: inline;}
+   #topContainer h1{color: #FFF;font-size: 1em; font-weight:normal;line-height:normal; padding: 0 .5em 0 0}
+   #topContainer p{padding:0 0.5em 0 0.5em}
+   #topContainer span.country{color: #E6B73D}
+   #topContainer span.tel{color: #FFF}
+   #topContainer span.country,#topContainer span.tel{font-size:1.2em; font-weight: 700; font-stretch: normal;font-variant:normal; text-transform: capitalize;}
+   #topContainer span.country:after{content:": ";}
+	
+	/* header segment */
+	#header{ border-bottom: 3px solid #094174; margin-bottom: 1em;}
+	#header h1 {display:inline-block; margin-bottom: -3px}
+	.ie7 #header a h1{
+		display:block;
+		background-image:url(../images/sprite.png);
+		background-repeat:no-repeat;
+		height:75px;width:180px;background-position:-224px -98px;
+		display:block;
+		text-indent:-99999px;
+		text-transform: capitalize;
+		overflow:hidden;
+	}
+	#header section.country{float: right; display: inline-block; vertical-align:top;}
+	.ie7 #header section.country{*display:inline; zoom:1; margin-top: -80px;}
+	#header section.country h2{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
+	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
+	
+	/* top navigation */
+	
+	nav#headerNav{
+	padding: 0;
+	float: right;
+	margin-top:-40px;
+	display: block;
+	width: 671px;
+	/* Background color */
+	background: #094174; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174, #0E6399);
+	background: -o-linear-gradient(#094174, #0E6399);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#0E6399)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #0E6399);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	position: relative;
+	z-index: 99999;
+	behavior: url(PIE.htc);
+	}
+	
+	.ie6 nav#headeNav,.ie7 nav#headeNav,.ie8 nav#headerNav{width:680px;}
+	
+	/* = Top Menu Navigation
+-------------------------------------------------------------- */
+nav#headerNav ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding-left: 0;
+}
+nav#headerNav li {
+	float: left;
+	position: relative;
+	border-right: 1px dotted #999;
+}
+nav#headerNav li:last-child{border-right: none;}
+nav#headerNav a {
+	color: #eee;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 1.240em;
+	text-decoration: none;
+}
+nav#headerNav ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+nav#headerNav ul ul a {
+	background: #5BB5DF;
+	border-bottom: 1px dotted #ddd;
+	color: #EEE;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+nav#headerNav li:hover > a,
+nav#headerNav ul ul :hover > a,
+nav#headerNav a:focus {
+	background: #89d9ff;
+}
+nav#headerNav li:hover > a,
+nav#headerNav a:focus {
+	background: #5BB5DF; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174,#5BB5DF);
+	background: -o-linear-gradient(#094174,#5BB5DF);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#5BB5DF)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #5BB5DF);
+	behavior: url(http://examples.iamwebsitedeveloper.com/john/css/PIE.htc);
+	color: #FFF;
+}
+nav#headerNav ul li:hover > ul {
+	display: block;
+}
+nav#headerNav .current_page_item > a,
+nav#headerNav .current_page_ancestor > a {
+	font-weight: bold;
+	background: #5BB5DF;
+}
+nav#headerNav .login > a{
+	background: #9BBE35;
+	background: -moz-linear-gradient(#9BBE35,#548E18);
+	background: -o-linear-gradient(#9BBE35,#548E18);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9BBE35), to(#548E18)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#9BBE35, #548E18);
+	-pie-background: linear-gradient(#9BBE35, #548E18); /*PIE*/
+	behavior: url(PIE.htc);
+}
+nav#headerNav .login > a:hover{
+	color: #FFF;
+	background: #C13A2C;
+	background: -moz-linear-gradient(#C13A2C,#F96D1B);
+	background: -o-linear-gradient(#C13A2C,#0AF056);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C13A2C), to(#F96D1B)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#C13A2C, #F96D1B);
+	behavior: url(PIE.htc);
+}
+
+	/* Content styles within slide deck and Slide Scroll Styling */
+	#slidedeck_frame{
+		width: 650px;
+		height: 300px;
+		margin-bottom: 2em;
+	}
+	#slidedeck_frame img.slideContent{float: left; padding-right: 2em;}
+	#slidedeck_frame h2{font-size: 2em;}
+	#slidedeck_frame a.slideButton{
+		border:1px solid #dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: #41609c;
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        behavior: url(PIE.htc);
+	}
+	#slidedeck_frame a.slideButton:link{
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:hover{
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3f61a6), to(#304670));
+        background: -moz-linear-gradient(#3f61a6, #304670);
+        background: linear-gradient(#3f61a6, #304670);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:active{
+       
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:visited{
+      
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+        
+        /* Conditonal Clases for Slider IE */
+        
+        .ie6 #slidedeck_frame a.slideButton:link,.ie7 #slidedeck_frame a.slideButton:link,.ie8 #slidedeck_frame a.slideButton:link{background:#41609c;}
+        .ie6 #slidedeck_frame a.slideButton:hover,.ie7 #slidedeck_frame a.slideButton:hover,.ie8 #slidedeck_frame a.slideButton:hover, .ie6 #slidedeck_frame a.slideButton:active,.ie7 #slidedeck_frame a.slideButton:active,.ie8 #slidedeck_frame a.slideButton:active,.ie6 #slidedeck_frame a.slideButton:visited,.ie7 #slidedeck_frame a.slideButton:visited,.ie8 #slidedeck_frame a.slideButton:visited{background: #304670;}
+        
+    .skin-slidedeck {
+    position: relative;
+	padding: 11px 11px 24px;
+    background: url('../images/back.png') 0 0 #d7d7d7;
+    border: 14px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/*
+ * The SlideDeck element itself.
+ * 
+ * Customize the width and height to increase or decrease the size of
+ * your SlideDeck. 
+ */
+.skin-slidedeck dl.slidedeck {
+    position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+
+.skin-slidedeck dl.slidedeck > dd {
+    position: relative;
+	height: 294px;
+	padding: 10px 15px;
+    margin: 0;
+	border-right: 5px solid #d7d7d7;
+	background: url('../images/slides.png') bottom left #d7d7d7;    /* Note: you should position the background with pixel measurements in IE7 as it improperly calculates the height of the DD element when containing vertical slides */
+    overflow: hidden;
+}
+
+
+.skin-slidedeck dl.slidedeck > dt {
+    position: relative;
+	cursor: pointer;
+	height: 43px;
+	line-height: 38px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Futura Bold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: url('../images/spines.png') top left #d7d7d7;
+	color: #505050;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * The hovered state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover {
+	color: #000;
+	background-position: center left;
+}
+
+/*
+ * The active state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active,
+.skin-slidedeck dl.slidedeck dt.spine.active:hover {
+	cursor: default;
+	color: #fff;
+	background-position: bottom left;
+}
+
+/*
+ * The SlideDeck spine index labels.
+ * 
+ * This is to style the numbers (or letters if you have customized it so)
+ * that appear at the bottom of each SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine .index {
+	margin-bottom: 2px;
+    font-size: 24px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #505050;
+}
+.skin-slidedeck dl.slidedeck dt.spine.active .index { margin-bottom: 0; }
+
+/*
+ * The hovered state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover .index { color: #000000; }
+
+/*
+ * The active state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active .index { color: #ffffff; }
+
+/*
+ * The SlideDeck "active corner".
+ * 
+ * This is the small triangle that appears in the upper left of the active
+ * slide. This can be made any size and positioned differently by modifying
+ * the margin values. By default the left margin is inset to prevent any
+ * gap from appearing as the SlideDeck animates.
+ */
+.skin-slidedeck dl.slidedeck .activeCorner {
+	margin-left: -6px;
+	background-image: url('../images/corner.png');
+	width: 12px;
+	height: 25px;
+}
+	
+	/* main */
+	
+	.box{
+	margin-bottom: 1em;
+	z-index: 0px;
+	position: relative;
+	border: 1px solid #CCC;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(PIE.htc);
+	-khtml-border-radius:10px;
+	-moz-box-shadow: 0px 1px 1px 0.8px #DDD;
+	-webkit-box-shadow: 0px 1px 2px 0.8px #DDD;
+	box-shadow: 0px 1px 1px 0.8px #DDD;
+	behavior: url(PIE.htc);
+	}
+	
+	.ie8 article.box, .ie8 section.box, .ie8 aside.box,.ie7 article.box, .ie7 section.box,.ie7 aside.box,.ie6 article.box, .ie6 section.box,.ie6 aside.box{
+	-ms-filter: /* IE8+ */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";filter: /* IE<8 */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";
+	}
+	.ie7 .box,.ie8 .box{background: #FFFFFF;}
+	
+	h1.title{
+		color: #FFF;
+		z-index: 0px;
+		position: relative;
+		font-size: 1.2em;
+		padding: 0.5em 0.8em 0.5em 0.5em;
+		margin: 0;
+		background:#0D588D;
+		-moz-border-radius: 10px 10px 0px 0px;
+		-webkit-border-radius: 10px 10px 0px 0px;
+		border-radius: 10px 10px 0px 0px;
+		-pie-border-radius:10px 10px 0px 0px;
+		behavior: url(PIE.htc);
+		-khtml-border-radius:10px 10px 0px 0px;
+		-webkit-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		-moz-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+	}
+		
+	h1.title:before,ul#double li:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	
+	.box p, .box section{padding: 1em;}
+	
+	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;z-index: 0px;
+	position: relative;}
+	ul#double li{ line-height: 1.5em; float: left; display: inline; width: 50%;}
+	
+	span#button{ margin-left: 30%; margin-top: 5%; display: inline-table;}
+	a.signup{font-size: 1.5em; font-weight: 700; text-transform: capitalize; text-decoration: none;color: #FFF;padding: .3em .5em; background: #85B63A; border: 2px solid #CCC;-moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+behavior: url(PIE.htc);
+text-align: center;
+}
+a:hover.signup{
+	background: #073768;
+}
+
+
+	/* Fatures segment */
+	#features{padding-bottom: 0.8em;}
+	#features a{display: inline-block; display: -moz-inline-stack; width: 16%; min-height: 132px; background-color:#EEE; border: 1px solid #CCC; padding: 5px 8px 5px 8px; cursor: pointer; text-align: center; margin-left:5px; margin-top: 1em; vertical-align: top;}
+	#features span{margin-bottom: 10px; margin-right: 5px;}
+	#features a:hover{background-color: #CCC;}
+	
+	.ie7 #features a{zoom: 1;*display:inline;_height:132px}
+	
+
+
+
+	/* Aside */
+	
+	#recommendation ul{margin:0 auto; padding: 0.8em 0.5em 0.5em 1em; margin-bottom: 1.2em;}
+	#recommendation ul li{list-style: none; padding: 0;margin: 0 0 1.2em 0;}
+	#recommendation blockquote{margin: 0.3em 0.8em 0.5em 0.4em; color: #666; font-style: italic;}
+	#recommendation cite{ font-weight: 600;}
+	#recommendation a.more,#developerAPI a.more{ padding: 0.5em 0.8em 1.3em 0.8em;font-size:1em; display: block;}
+	
+	/* Side Nav */
+	#sideNav{margin-bottom: 1em;}
+	#sideNav h1{margin-bottom: 0;}
+	#sideNav ul{margin: 0 auto; padding: 0px}
+	#sideNav ul li{font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none;border-bottom: 1px solid #0D588D;
+	/* Box Shadow */
+	-moz-box-shadow: 0px 1px #ccc;
+	-webkit-box-shadow: 0px 1px #ccc;
+	box-shadow: 0px 1px #ccc;
+	behavior: url(PIE.htc);
+
+}
+	#sideNav ul li a{text-decoration: none;color: #FFF; display:block;padding: 0.5em;background: #2881bf;}
+	#sideNav ul li a:hover{background: #65B0D3; cursor: pointer;}
+	
+	/* Free Trial and Blog Segment */
+	#sideNav ul li.freeTrial a,#sideNav ul li.blog a{
+		background-color: #c92716;
+		border-width: 1px;
+		border-color: #999999;
+	}
+
+	#sideNav ul li.freeTrial a:hover,#sideNav ul li.blog a:hover{
+	cursor:pointer;
+	background: #F98416;
+	}
+	#sideNav ul li.freeTrial a:before{content: url("../images/sign_up.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	
+	#sideNav ul li.blog a:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	
+	#developerAPI p{float: left; margin-right: 5px; display:inline-table; width: 30%; padding: 0.3em 0.3em 1em 1em;}
+	#developerAPI span{margin-top: 1em;}
+
+
+	/* Footer */
+	footer{background: #666; border-top: 5px solid #333; margin-top: 2em; margin-bottom: 1em; padding-bottom: 1em;}
+	
+	footer h1,#fnav h2{color: #FFF;}
+	#fnav h2{font-size: 1.2em;}
+	footer h1{ padding-left: 0.5em; border-bottom: 1px solid #CCC;}
+	
+	#fnav ul{}
+	#fnav li{list-style: square inside; padding-top: 0.5em;}
+	#fnav li a{color: #FFF; text-decoration: none;}
+	#fnav li a:hover{text-decoration: underline;}
+	
+	span#CopyRight{margin: 0 auto; padding: 1em 0 1em 0; display: block;}
+	span#CopyRight a{color: #BBB;}
+	span#CopyRight a:hover{color: #FFF;}
+
+	
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+
+/* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Remove Android and iOS tap highlight color to prevent entire container being highlighted
+ *    www.yuiblog.com/blog/2010/10/01/quick-tip-customizing-the-mobile-safari-tap-highlight-color/
+ * 4. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* 
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+::-moz-selection { background: #063163; color: #fff; text-shadow: none; }
+::selection { background: #063163; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #063163; }
+a:visited { color: #063163; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; color: #0E6298; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: gist.github.com/413930 */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Improve image quality when scaled in IE7
+ * code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* 
+ * 1. Correct color not inheriting in IE6/7/8/9 
+ * 2. Correct alignment displayed oddly in IE6/7 
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7
+ */
+
+button, input { line-height: normal; *overflow: visible; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+/* 
+ * Remove inner padding and border in FF3/4
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ 
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Remove default vertical scrollbar in IE6/7/8/9 */
+textarea { overflow: auto; vertical-align: top; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* #Base 960 Grid
+Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
+================================================== */
+
+    .container                                  { position: relative; width: 960px; margin: 0 auto; padding: 0; }
+    .column, .columns                           { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .row                                        { margin-bottom: 20px; }
+
+    /* Nested Column Classes */
+    .column.alpha, .columns.alpha               { margin-left: 0; }
+    .column.omega, .columns.omega               { margin-right: 0; }
+
+    /* Base Grid */
+    .container .one.column                      { width: 40px;  }
+    .container .two.columns                     { width: 100px; }
+    .container .three.columns                   { width: 160px; }
+    .container .four.columns                    { width: 220px; }
+    .container .five.columns                    { width: 280px; }
+    .container .six.columns                     { width: 340px; }
+    .container .seven.columns                   { width: 400px; }
+    .container .eight.columns                   { width: 460px; }
+    .container .nine.columns                    { width: 520px; }
+    .container .ten.columns                     { width: 580px; }
+    .container .eleven.columns                  { width: 640px; }
+    .container .twelve.columns                  { width: 700px; }
+    .container .thirteen.columns                { width: 760px; }
+    .container .fourteen.columns                { width: 820px; }
+    .container .fifteen.columns                 { width: 880px; }
+    .container .sixteen.columns                 { width: 940px; }
+
+    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+
+    /* Offsets */
+    .container .offset-by-one                   { padding-left: 60px;  }
+    .container .offset-by-two                   { padding-left: 120px; }
+    .container .offset-by-three                 { padding-left: 180px; }
+    .container .offset-by-four                  { padding-left: 240px; }
+    .container .offset-by-five                  { padding-left: 300px; }
+    .container .offset-by-six                   { padding-left: 360px; }
+    .container .offset-by-seven                 { padding-left: 420px; }
+    .container .offset-by-eight                 { padding-left: 480px; }
+    .container .offset-by-nine                  { padding-left: 540px; }
+    .container .offset-by-ten                   { padding-left: 600px; }
+    .container .offset-by-eleven                { padding-left: 660px; }
+    .container .offset-by-twelve                { padding-left: 720px; }
+    .container .offset-by-thirteen              { padding-left: 780px; }
+    .container .offset-by-fourteen              { padding-left: 840px; }
+    .container .offset-by-fifteen               { padding-left: 900px; }
+
+/* =============================================================================
+   Primary styles
+   Author: Shajed Evan http://www.behance.net/evanshajed
+   ========================================================================== */
+   
+   /* Sprite images */
+   
+   .sendmode{
+	background-image:url(../images/sprite.png);
+	background-repeat:no-repeat;
+	display:block;
+	text-indent:-99999px;
+	text-transform: capitalize;
+	overflow:hidden;
+	}
+	
+
+	.allnetworks-ie{height:98px;width:533px;background-position:0 0;}
+	.flag_125{height:12px;width:16px;background-position:-533px 0;}
+	.flag_160{height:12px;width:16px;background-position:-533px -12px;}
+	.flag_183{height:12px;width:16px;background-position:-533px -24px;}
+	.flag_9{height:12px;width:16px;background-position:-533px -36px;}
+	.flag_italy{height:16px;width:16px;background-position:-533px -48px;}
+	.icon_1{height:90px;width:112px;background-position:0 -98px;}
+	.icon_2{height:90px;width:112px;background-position:0 -188px;}
+	.icon_3{height:90px;width:112px;background-position:0 -278px;}
+	.icon_4{height:90px;width:112px;background-position:0 -368px;}
+	.icon_5{height:90px;width:112px;background-position:-112px -98px;}
+	.logo_sendmode{height:75px;width:180px;background-position:-224px -98px;}
+	.pic_sendmodeapi{height:97px;width:98px;background-position:-112px -188px;}
+	.pic_ireland{height:97px;width:98px;background: url(../images/flag_80.gif) no-repeat; display: block; overflow: hidden; text-indent: -99999px;}
+	
+	/* Global Segment */
+	ul#double,#features a,#sideNav{ -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   -khtml-border-radius:5px;
+   behavior: url(PIE.htc);
+   }
+	
+	/* body segment */	
+   body{background:#0E6399 url("../images/background.gif") repeat-x;}
+   
+   #container{background-color: #ffffff;
+   border: 1px solid #8A8A8A;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+   -moz-box-shadow: 0px 0px 3px #000000;
+   -webkit-box-shadow: 0px 0px 3px #000000;
+   box-shadow: 0px 0px 3px #000000;
+   position: relative;
+   behavior: url(PIE.htc);
+   }
+   
+   
+   /* topContainer segment */
+   #topContainer{ text-align: right; padding-right: 1em; margin-bottom: 1em; margin-top: 1em;}
+   #topContainer h1,#topContainer p{display: inline;}
+   #topContainer h1{color: #FFF;font-size: 1em; font-weight:normal;line-height:normal; padding: 0 .5em 0 0}
+   #topContainer p{padding:0 0.5em 0 0.5em}
+   #topContainer span.country{color: #E6B73D}
+   #topContainer span.tel{color: #FFF}
+   #topContainer span.country,#topContainer span.tel{font-size:1.2em; font-weight: 700; font-stretch: normal;font-variant:normal; text-transform: capitalize;}
+   #topContainer span.country:after{content:": ";}
+	
+	/* header segment */
+	#header{ border-bottom: 3px solid #094174; margin-bottom: 1em;}
+	#header h1 {display:inline-block; margin-bottom: -3px}
+	.ie7 #header a h1{
+		display:block;
+		background-image:url(../images/sprite.png);
+		background-repeat:no-repeat;
+		height:75px;width:180px;background-position:-224px -98px;
+		display:block;
+		text-indent:-99999px;
+		text-transform: capitalize;
+		overflow:hidden;
+	}
+	#header section.country{float: right; display: inline-block; vertical-align:top;}
+	.ie7 #header section.country{*display:inline; zoom:1; margin-top: -80px;}
+	#header section.country h2{font-size: 1em; font-weight: normal;font-stretch: normal;font-variant: normal; display:inline;line-height: normal; float: left;margin:10.4px 10px 10.4px 0}
+	#header section.country span{ width:16px; height: 12px; float: right; padding: 0 .3em 0 .3em; margin-top: 10.4px; margin-bottom: 10.4px;}
+	
+	/* top navigation */
+	
+	nav#headerNav{
+	padding: 0;
+	float: right;
+	margin-top:-40px;
+	display: block;
+	width: 671px;
+	/* Background color */
+	background: #094174; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174, #0E6399);
+	background: -o-linear-gradient(#094174, #0E6399);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#0E6399)); /* older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #0E6399);
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
+	position: relative;
+	z-index: 99999;
+	behavior: url(PIE.htc);
+	}
+	
+	.ie6 nav#headeNav,.ie7 nav#headeNav,.ie8 nav#headerNav{width:680px;}
+	
+	/* = Top Menu Navigation
+-------------------------------------------------------------- */
+nav#headerNav ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding-left: 0;
+}
+nav#headerNav li {
+	float: left;
+	position: relative;
+	border-right: 1px dotted #999;
+}
+nav#headerNav li:last-child{border-right: none;}
+nav#headerNav a {
+	color: #eee;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 1.240em;
+	text-decoration: none;
+}
+nav#headerNav ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#access ul ul ul {
+	left: 100%;
+	top: 0;
+}
+nav#headerNav ul ul a {
+	background: #5BB5DF;
+	border-bottom: 1px dotted #ddd;
+	color: #EEE;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+nav#headerNav li:hover > a,
+nav#headerNav ul ul :hover > a,
+nav#headerNav a:focus {
+	background: #89d9ff;
+}
+nav#headerNav li:hover > a,
+nav#headerNav a:focus {
+	background: #5BB5DF; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#094174,#5BB5DF);
+	background: -o-linear-gradient(#094174,#5BB5DF);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#094174), to(#5BB5DF)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#094174, #5BB5DF);
+	behavior: url(http://examples.iamwebsitedeveloper.com/john/css/PIE.htc);
+	color: #FFF;
+}
+nav#headerNav ul li:hover > ul {
+	display: block;
+}
+nav#headerNav .current_page_item > a,
+nav#headerNav .current_page_ancestor > a {
+	font-weight: bold;
+	background: #5BB5DF;
+}
+nav#headerNav .login > a{
+	background: #9BBE35;
+	background: -moz-linear-gradient(#9BBE35,#548E18);
+	background: -o-linear-gradient(#9BBE35,#548E18);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9BBE35), to(#548E18)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#9BBE35, #548E18);
+	-pie-background: linear-gradient(#9BBE35, #548E18); /*PIE*/
+	behavior: url(PIE.htc);
+}
+nav#headerNav .login > a:hover{
+	color: #FFF;
+	background: #C13A2C;
+	background: -moz-linear-gradient(#C13A2C,#F96D1B);
+	background: -o-linear-gradient(#C13A2C,#0AF056);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C13A2C), to(#F96D1B)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#C13A2C, #F96D1B);
+	behavior: url(PIE.htc);
+}
+
+	/* Content styles within slide deck and Slide Scroll Styling */
+	#slidedeck_frame{
+		width: 650px;
+		height: 300px;
+		margin-bottom: 2em;
+	}
+	#slidedeck_frame img.slideContent{float: left; padding-right: 2em;}
+	#slidedeck_frame h2{font-size: 2em;}
+	#slidedeck_frame a.slideButton{
+		border:1px solid #dedede;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        color:#ffffff;
+        font-size:16px;
+        font-style:normal;
+        text-decoration:none;
+        text-transform:capitalize;
+        letter-spacing:1px;
+        box-shadow:1px 1px 2px #242324;
+        -webkit-box-shadow:1px 1px 2px #242324;
+        -moz-box-shadow:1px 1px 2px #242324;
+        font-family:Helvetica;
+        background: #41609c;
+        padding:5px 15px;
+        text-shadow:#262e4d 0px 1px 0px;
+        behavior: url(PIE.htc);
+	}
+	#slidedeck_frame a.slideButton:link{
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:hover{
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#3f61a6), to(#304670));
+        background: -moz-linear-gradient(#3f61a6, #304670);
+        background: linear-gradient(#3f61a6, #304670);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:active{
+       
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+
+#slidedeck_frame a.slideButton:visited{
+      
+        background: #304670;
+        background: -webkit-gradient(linear, 0 0, 0 bottom, from(#6397ff), to(#41609c));
+        background: -moz-linear-gradient(#6397ff, #41609c);
+        background: linear-gradient(#6397ff, #41609c);
+        behavior: url(PIE.htc);
+        }
+        
+        /* Conditonal Clases for Slider IE */
+        
+        .ie6 #slidedeck_frame a.slideButton:link,.ie7 #slidedeck_frame a.slideButton:link,.ie8 #slidedeck_frame a.slideButton:link{background:#41609c;}
+        .ie6 #slidedeck_frame a.slideButton:hover,.ie7 #slidedeck_frame a.slideButton:hover,.ie8 #slidedeck_frame a.slideButton:hover, .ie6 #slidedeck_frame a.slideButton:active,.ie7 #slidedeck_frame a.slideButton:active,.ie8 #slidedeck_frame a.slideButton:active,.ie6 #slidedeck_frame a.slideButton:visited,.ie7 #slidedeck_frame a.slideButton:visited,.ie8 #slidedeck_frame a.slideButton:visited{background: #304670;}
+        
+    .skin-slidedeck {
+    position: relative;
+	padding: 11px 11px 24px;
+    background: url('../images/back.png') 0 0 #d7d7d7;
+    border: 14px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/*
+ * The SlideDeck element itself.
+ * 
+ * Customize the width and height to increase or decrease the size of
+ * your SlideDeck. 
+ */
+.skin-slidedeck dl.slidedeck {
+    position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+    padding: 0;
+}
+
+.skin-slidedeck dl.slidedeck > dd {
+    position: relative;
+	height: 294px;
+	padding: 10px 15px;
+    margin: 0;
+	border-right: 5px solid #d7d7d7;
+	background: url('../images/slides.png') bottom left #d7d7d7;    /* Note: you should position the background with pixel measurements in IE7 as it improperly calculates the height of the DD element when containing vertical slides */
+    overflow: hidden;
+}
+
+
+.skin-slidedeck dl.slidedeck > dt {
+    position: relative;
+	cursor: pointer;
+	height: 43px;
+	line-height: 38px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Futura Bold", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background: url('../images/spines.png') top left #d7d7d7;
+	color: #505050;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * The hovered state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover {
+	color: #000;
+	background-position: center left;
+}
+
+/*
+ * The active state of a SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active,
+.skin-slidedeck dl.slidedeck dt.spine.active:hover {
+	cursor: default;
+	color: #fff;
+	background-position: bottom left;
+}
+
+/*
+ * The SlideDeck spine index labels.
+ * 
+ * This is to style the numbers (or letters if you have customized it so)
+ * that appear at the bottom of each SlideDeck spine.
+ */
+.skin-slidedeck dl.slidedeck dt.spine .index {
+	margin-bottom: 2px;
+    font-size: 24px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #505050;
+}
+.skin-slidedeck dl.slidedeck dt.spine.active .index { margin-bottom: 0; }
+
+/*
+ * The hovered state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine:hover .index { color: #000000; }
+
+/*
+ * The active state of a SlideDeck spine index label.
+ */
+.skin-slidedeck dl.slidedeck dt.spine.active .index { color: #ffffff; }
+
+/*
+ * The SlideDeck "active corner".
+ * 
+ * This is the small triangle that appears in the upper left of the active
+ * slide. This can be made any size and positioned differently by modifying
+ * the margin values. By default the left margin is inset to prevent any
+ * gap from appearing as the SlideDeck animates.
+ */
+.skin-slidedeck dl.slidedeck .activeCorner {
+	margin-left: -6px;
+	background-image: url('../images/corner.png');
+	width: 12px;
+	height: 25px;
+}
+	
+	/* main */
+	
+	.box{
+	margin-bottom: 1em;
+	z-index: 0px;
+	position: relative;
+	border: 1px solid #CCC;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	behavior: url(PIE.htc);
+	-khtml-border-radius:10px;
+	-moz-box-shadow: 0px 1px 1px 0.8px #DDD;
+	-webkit-box-shadow: 0px 1px 2px 0.8px #DDD;
+	box-shadow: 0px 1px 1px 0.8px #DDD;
+	behavior: url(PIE.htc);
+	}
+	
+	.ie8 article.box, .ie8 section.box, .ie8 aside.box,.ie7 article.box, .ie7 section.box,.ie7 aside.box,.ie6 article.box, .ie6 section.box,.ie6 aside.box{
+	-ms-filter: /* IE8+ */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";filter: /* IE<8 */"filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=7, OffY=7, Color=#DDD, Positive=true)";
+	}
+	.ie7 .box,.ie8 .box{background: #FFFFFF;}
+	
+	h1.title{
+		color: #FFF;
+		z-index: 0px;
+		position: relative;
+		font-size: 1.2em;
+		padding: 0.5em 0.8em 0.5em 0.5em;
+		margin: 0;
+		background:#0D588D;
+		-moz-border-radius: 10px 10px 0px 0px;
+		-webkit-border-radius: 10px 10px 0px 0px;
+		border-radius: 10px 10px 0px 0px;
+		-pie-border-radius:10px 10px 0px 0px;
+		behavior: url(PIE.htc);
+		-khtml-border-radius:10px 10px 0px 0px;
+		-webkit-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		-moz-box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+		box-shadow: inset 0px -1px 1px 0px #1CAFBF;
+	}
+		
+	h1.title:before,ul#double li:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	
+	.box p, .box section{padding: 1em;}
+	
+	ul#double{width: 650px; margin-bottom: 20px;overflow: hidden; background: #F5F7F7; padding: 1em; border:1px solid #DDD; margin-bottom: 20px;z-index: 0px;
+	position: relative;}
+	ul#double li{ line-height: 1.5em; float: left; display: inline; width: 50%;}
+	
+	span#button{ margin-left: 30%; margin-top: 5%; display: inline-table;}
+	a.signup{font-size: 1.5em; font-weight: 700; text-transform: capitalize; text-decoration: none;color: #FFF;padding: .3em .5em; background: #85B63A; border: 2px solid #CCC;-moz-border-radius: 16px;
+-webkit-border-radius: 16px;
+border-radius: 16px;
+behavior: url(PIE.htc);
+text-align: center;
+}
+a:hover.signup{
+	background: #073768;
+}
+
+
+	/* Fatures segment */
+	#features{padding-bottom: 0.8em;}
+	#features a{display: inline-block; display: -moz-inline-stack; width: 16%; min-height: 132px; background-color:#EEE; border: 1px solid #CCC; padding: 5px 8px 5px 8px; cursor: pointer; text-align: center; margin-left:5px; margin-top: 1em; vertical-align: top;}
+	#features span{margin-bottom: 10px; margin-right: 5px;}
+	#features a:hover{background-color: #CCC;}
+	
+	.ie7 #features a{zoom: 1;*display:inline;_height:132px}
+	
+
+
+
+	/* Aside */
+	
+	#recommendation ul{margin:0 auto; padding: 0.8em 0.5em 0.5em 1em; margin-bottom: 1.2em;}
+	#recommendation ul li{list-style: none; padding: 0;margin: 0 0 1.2em 0;}
+	#recommendation blockquote{margin: 0.3em 0.8em 0.5em 0.4em; color: #666; font-style: italic;}
+	#recommendation cite{ font-weight: 600;}
+	#recommendation a.more,#developerAPI a.more{ padding: 0.5em 0.8em 1.3em 0.8em;font-size:1em; display: block;}
+	
+	/* Side Nav */
+	#sideNav{margin-bottom: 1em;}
+	#sideNav h1{margin-bottom: 0;}
+	#sideNav ul{margin: 0 auto; padding: 0px}
+	#sideNav ul li{font-size: 1.1em; font-variant: normal; font-stretch: normal; font-variant: normal; list-style: none;border-bottom: 1px solid #0D588D;
+	/* Box Shadow */
+	-moz-box-shadow: 0px 1px #ccc;
+	-webkit-box-shadow: 0px 1px #ccc;
+	box-shadow: 0px 1px #ccc;
+	behavior: url(PIE.htc);
+
+}
+	#sideNav ul li a{text-decoration: none;color: #FFF; display:block;padding: 0.5em;background: #2881bf;}
+	#sideNav ul li a:hover{background: #65B0D3; cursor: pointer;}
+	
+	/* Free Trial and Blog Segment */
+	#sideNav ul li.freeTrial a,#sideNav ul li.blog a{
+		background-color: #c92716;
+		border-width: 1px;
+		border-color: #999999;
+	}
+
+	#sideNav ul li.freeTrial a:hover,#sideNav ul li.blog a:hover{
+	cursor:pointer;
+	background: #F98416;
+	}
+	#sideNav ul li.freeTrial a:before{content: url("../images/sign_up.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	
+	#sideNav ul li.blog a:before{content: url("../images/kblogger.png"); display: inline; width: 16px; height: 16px; padding: 2px; margin:0 0.8em 0 0;}
+	
+	#developerAPI p{float: left; margin-right: 5px; display:inline-table; width: 30%; padding: 0.3em 0.3em 1em 1em;}
+	#developerAPI span{margin-top: 1em;}
+
+
+	/* Footer */
+	footer{background: #666; border-top: 5px solid #333; margin-top: 2em; margin-bottom: 1em; padding-bottom: 1em;}
+	
+	footer h1,#fnav h2{color: #FFF;}
+	#fnav h2{font-size: 1.2em;}
+	footer h1{ padding-left: 0.5em; border-bottom: 1px solid #CCC;}
+	
+	#fnav ul{}
+	#fnav li{list-style: square inside; padding-top: 0.5em;}
+	#fnav li a{color: #FFF; text-decoration: none;}
+	#fnav li a:hover{text-decoration: underline;}
+	
+	span#CopyRight{margin: 0 auto; padding: 1em 0 1em 0; display: block;}
+	span#CopyRight a{color: #BBB;}
+	span#CopyRight a:hover{color: #FFF;}
+
+	
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+
+/* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+
+
+
+/* =============================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

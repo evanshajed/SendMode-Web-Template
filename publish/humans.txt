@@ -1,0 +1,27 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+
+  Project Consultant: John McNamara
+  Site: http://sendmode.com/
+  Location: Ireland
+
+  UX/UI Expert: Shajed Evan
+  Site: http://behance.net/evanshajed 
+  Twitter: @evanshajed
+  Location: Dhaka, Bangladesh
+  
+
+/* THANKS */
+  Names: HTML5 BoilerPlate Team
+  twitter: @https://twitter.com/h5bp 
+
+/* SITE */
+  Last Update:2012/02/03
+  Language: English
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software:Coda,Photoshop                 
+                           
