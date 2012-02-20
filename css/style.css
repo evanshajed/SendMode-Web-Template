@@ -428,7 +428,7 @@ nav#headerNav .current_page_ancestor > a {
 	font-weight: bold;
 	background: #5BB5DF;
 }
-nav#headerNav .login > a{
+nav#headerNav li.login a{
 	background: #9BBE35;
 	background: -moz-linear-gradient(#9BBE35,#548E18);
 	background: -o-linear-gradient(#9BBE35,#548E18);
@@ -437,14 +437,14 @@ nav#headerNav .login > a{
 	-pie-background: linear-gradient(#9BBE35, #548E18); /*PIE*/
 	behavior: url(PIE.htc);
 }
-nav#headerNav .login > a:hover{
+nav#headerNav li.login:hover a,nav#headerNav li.login a:hover{
 	color: #FFF;
 	background: #C13A2C;
 	background: -moz-linear-gradient(#C13A2C,#F96D1B);
 	background: -o-linear-gradient(#C13A2C,#0AF056);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C13A2C), to(#F96D1B)); /* Older webkit syntax */
 	background: -webkit-linear-gradient(#C13A2C, #F96D1B);
-	behavior: url(PIE.htc);
+	behavior: url(http://examples.iamwebsitedeveloper.com/john/css/PIE.htc);
 }
 	
 	/* main */
