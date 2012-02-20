@@ -437,14 +437,8 @@ nav#headerNav li.login a{
 	-pie-background: linear-gradient(#9BBE35, #548E18); /*PIE*/
 	behavior: url(PIE.htc);
 }
-nav#headerNav li.login:hover a,nav#headerNav li.login a:hover{
-	color: #FFF;
-	background: #C13A2C;
-	background: -moz-linear-gradient(#C13A2C,#F96D1B);
-	background: -o-linear-gradient(#C13A2C,#0AF056);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#C13A2C), to(#F96D1B)); /* Older webkit syntax */
-	background: -webkit-linear-gradient(#C13A2C, #F96D1B);
-	behavior: url(http://examples.iamwebsitedeveloper.com/john/css/PIE.htc);
+nav#headerNav li.login a:hover{
+	background: #F64400;
 }
 	
 	/* main */
@@ -457,6 +451,7 @@ nav#headerNav li.login:hover a,nav#headerNav li.login a:hover{
 	.flex-container a:hover{
 		color: #FFF;
 	}
+
 	.box{
 	margin-bottom: 1em;
 	z-index: 0px;

@@ -13,7 +13,6 @@ $(document).ready(function() {
     setHeight('.featuredService');
     $('.flexslider').flexslider({
     	animation:"slide",
-    	directionNav: false,
     	controlsContainer:".flex-container"
     });
 });
