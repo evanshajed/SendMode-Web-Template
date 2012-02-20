@@ -570,7 +570,34 @@ form.login input[type="submit"]{
 	margin-left:22%;
 }
 
-
+/* Team */
+.team ol{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.team ol li{
+	width: 100%;
+	padding-bottom: 1em;
+	clear: left;
+	display: block;
+	overflow: hidden;
+}
+.team img{
+	float: left;
+	width: 100px;
+	height:73px;
+	margin-right: 1%; 
+}
+.team p{
+	width: 75%;
+	float: right;
+	margin: 0;
+}
+.team p:first-child{
+padding-top:0;
+}
 
 
 
