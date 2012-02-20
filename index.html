@@ -14,11 +14,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 	<!-- Using rel="author" please include your contact/about page inside the href. If you have a google plus profile page you can use that link too! -->
 	<link rel="author" href="/contact.html">
 	<meta name="copyright" content="&copy; 2012 Example SendMode" />
 	<link rel="shortcut icon" href="/favicon.ico">
-
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="js/mylib/jquery.flexslider-min.js"></script>
 	<script src="js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body>
@@ -75,6 +79,20 @@
 		</nav>
 	</header>
 	<div class="twelve columns" id="main" role="main">
+		<section class="flex-container">
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<a href="#"><img src="images/slider/Welcome.jpg" alt="Image 1s" /></a>
+					<p class="flex-caption">Write down something here!!! <a href="#">A Link Comes here</a></p>
+				</li>
+				
+				<li>
+					<img src="images/slider/IMG_0589.jpg" alt="Image 1s" />
+				</li>
+			</ul>
+		</div>
+		</section>
 		<article class="box">
 			<h1 class="title">Bulk SMS Marketing, News and Alerts Platform</h1>
 			<p>SendMode's award winning service is the leading supplier of simple, reliable, low cost bulk SMS and mobile marketing services to thousands of organisations, ranging from large multinational companies to small independent businesses, clubs and charities.</p>
@@ -227,8 +245,6 @@
 <span class="five columns CopyRight" itemscope itemtype="http://schema.org/CreativeWork">Handcrafted by: <a rel="me" itemprop="creator" href="http://be.net/evanshajed" title="User Experience Designed with love">Shajed Evan</a></span>
 </section>
 <!--! end of #container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>

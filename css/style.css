@@ -449,6 +449,14 @@ nav#headerNav .login > a:hover{
 	
 	/* main */
 	
+	/* Flex Slider */
+	.flex-container{width: 95%; margin-left: 1em; margin-bottom: 3em;}
+	.flex-container a:link{
+		color: #CCC;
+	}
+	.flex-container a:hover{
+		color: #FFF;
+	}
 	.box{
 	margin-bottom: 1em;
 	z-index: 0px;
