@@ -363,8 +363,6 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
 	behavior: url(PIE.htc);
 	}
 	
-	.ie6 nav#headeNav,.ie7 nav#headeNav,.ie8 nav#headerNav{width:680px;}
-	
 	/* = Top Menu Navigation
 -------------------------------------------------------------- */
 nav#headerNav ul {
