@@ -14,74 +14,123 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Using rel="author" please include your contact/about page inside the href. If you have a google plus profile page you can use that link too! -->
 	<link rel="author" href="/contact.html">
-	<meta name="copyright" content="&copy; 2012 Example SendMode" />
 	<link rel="shortcut icon" href="/favicon.ico">
-
+	
 	<script src="js/libs/modernizr-2.0.6.min.js"></script>
-	<script src="js/webforms2/webforms2-p.js"></script>
 </head>
 <body>
-
-<div id="topContainer" class="container">
-	<section class="sixteen columns" itemscope itemtype="http://schema.org/Organization">
-		<h1>Call <span itemprop="name">SendMode</span> Today</h1>
-		<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			<span class="country" itemprop="addressCountry">UK</span>
-			<span class="tel" itemprop="telephone">0203-411-4464 </span>
-		</p>
-		<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			<span class="country" itemprop="addressCountry">IRL</span>
-			<span class="tel" itemprop="telephone">01-6648383</span>
-		</p>
-	</section>
-</div>
 <div id="container" class="container">
-	<header id="header" class="sixteen columns" role="banner">
-		<a href="index.html" title="SendMode"><h1 class="sendmode logo_sendmode">SendMode</h1></a>
-		<section id="country" class="country">
-			<h2>SnedMode International</h2>
-			
-				<a href="#" title=""><span class="pic_ireland">Ireland</span></a>
-				<span class="sendmode flag_183"><a href="#">UK</a></span>
-				<span class="sendmode flag_160"><a href="#">South Africa</a></span>
-				<span class="sendmode flag_9"><a href="#">Australia</a></span>
-				<span class="sendmode flag_9"><a href="#">Newzeland</a></span>
-			
-		</section>
-		<nav id="headerNav" role="navigation">
+	<header id="header" class="sixteen columns clearfix" role="banner">
+		<span class="five columns alpha"><h1 class="sendmode logo_sendmode"><a href="index.html" title="SendMode">SendMode</a></h1></span>
+		<div class="ten columns offset-by-one omega">
+			<section id="topContainer" itemscope itemtype="http://schema.org/Organization">
+				<h1>Call <span itemprop="name">SendMode</span> Today</h1>
+				<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="country" itemprop="addressCountry">UK</span>
+					<span class="tel" itemprop="telephone">0203-411-4464 </span>
+				</p>
+				<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span class="country" itemprop="addressCountry">IRL</span>
+				<span class="tel" itemprop="telephone">01-6648383</span>
+				</p>
+			</section>
+			<section id="headerSignup">
+				<h2 class="visuallyhidden">Get Free Trial or Request Quote</h2>
+				<ul class="headerAction">
+						<li><span class="hbutton"><a class="signup haction" href="#" title="">Sign up for free trial</a></span></li>
+							<li><span class="hbutton"><a class="signup haction blue" href="#" title="">Request a Free Quote</a></span></li>
+							<li><span class="hbutton"><a class="signup haction green" href="#" title="">Login</a></span></li>
+				</ul>
+						
+			</section>
+	</div>
+	</header><!-- # Header Done -->
+	
+	<!-- Navigation Starts -->
+	<nav id="headerNav" class="sixteen columns" role="navigation">
 			<h2 class="visuallyhidden">SendMode Navigation</h2>
 			<ul id="nav">
 				<li class="current_page_item"><a href="#" title="Home">Home</a></li>
 				<li>
 					<a href="#" title="Web Text">Web Text</a>
-					<ul>
+				  <ul>
 						<li><a href="#" title="Sub Nav 1">Sub Nav 1</a></li>
 						<li><a href="#" title="Sub Nav 2">Sub Nav 2</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#" title="SMS Shortcodes">SMS Shortcodes</a>
-					<ul>
+				  <ul>
 						<li><a href="#" title="title">Sub Nav 1</a></li>
 						<li><a href="#" title="title">Sub Nav 2</a></li>
 					</ul>
 				</li>
-				<li><a href="#" title="DB Cleaning">DB Cleaning</a></li>
-				<li><a href="#" title="Reseller Solutions">Reseller Solutions</a></li>
-				<li><a href="#" title="Pricing">Pricing</a></li>
+			  <li><a href="#" title="DB Cleaning">DB Cleaning</a></li>
+			  <li><a href="#" title="Reseller Solutions">Reseller Solutions</a></li>
+			  <li><a href="#" title="Pricing">Pricing</a></li>
 				<li class="login"><a href="#" title="Login">Login</a></li>
 			</ul>
 		</nav>
-	</header>
+	<!-- # Navigation Done -->
 	<div class="twelve columns" id="main" role="main">
-		<article class="box">
-			<h1 class="title">Bulk SMS Marketing, News and Alerts Platform</h1>
-			<table summary="Write some detailed summary for this table pricing">
-				
-			</table>	
-		</article>
+		<article class="box margin-top-20">
+	  <h1 class="title">Bulk SMS Marketing, News and Alerts Platform</h1>
+			<table class="priceTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th scope="col" abbr="Pack 1">Pack 1</th>
+                        <th scope="col" abbr="Pack 2">Pack 2</th>
+                        <th scope="col" abbr="Pack 3">Pack 3</th>
+                        <th scope="col" abbr="Pack 4">Pack 4</th>
+                        <th scope="col" abbr="Corporate">Corporate</th>
+                        
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Price</th>
+                        <td>$ 2.90</td>
+                        <td>$ 5.90</td>
+                        <td>$ 9.90</td>
+                        <td>$ 14.90</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th scope="row">Storage Space</th>
+                        <td>512 MB</td>
+                        <td>1 GB</td>
+                        <td>2 GB</td>
+                        <td>4 GB</td>
+                        <td rowspan="4">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Bandwidth</th>
+                        <td>50 GB</td>
+                        <td>100 GB</td>
+                        <td>150 GB</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MySQL Databases</th>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Setup</th>
+                        <td>19.90 $</td>
+                        <td>12.90 $</td>
+                        <td>free</td>
+                        <td>free</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
 	</div>
 	<div class="four columns" id="sidebar" role="complementary">
 		<aside id="sideNav">
@@ -90,46 +139,40 @@
 			<li class="freeTrial"><a href="#">Sign Up for Free Trial</a></li>
 			<li><a href="#">Award Winning Services</a></li>
 			<li><a href="#">Getting Started Videos</a></li>
+			<li><a href="#">What is Mobile Marketing</a></li>
+			<li><a href="#">Using SMS in your Business</a></li>
+			<li><a href="#">SendMode Features for Business</a></li>
+			<li><a href="#">Developers</a></li>
+			<li><a href="#">Price Comparison Table</a></li>
+			<li><a href="#">Switch to SendMode</a></li>
+			<li><a href="#">Meet the Team</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li class="blog"><a href="#">Blog</a></li>
 			</ul>
 		</aside>
-		
-		<aside class="box">
-			<h1 class="title">By Phone</h1>
-			<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			<span class="country" itemprop="addressCountry">UK</span>
-			<span class="tel" itemprop="telephone">0203-411-4464 </span>
-		</p>
-		<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			<span class="country" itemprop="addressCountry">IRL</span>
-			<span class="tel" itemprop="telephone">01-6648383</span>
-		</p>
-		<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-			<span class="country" itemprop="addressCountry">IRL</span>
-			<span class="tel" itemprop="telephone">01-6648383</span>
-		</p>
+		<aside id="recommendation" class="box">
+			<h1 class="title">Testimonials</h1>
+			<ul>
+				<li>
+					<blockquote>"SendMode offer a great and easy to use service. It has increased my business and has halved my costs with a much better service with the personal touch."</blockquote>
+					<cite>Nuala Lynch, RIVA BINGO, UK</cite>
+				</li>
+				<li>
+					<blockquote>"SendMode offer a great and easy to use service. It has increased my business and has halved my costs with a much better service with the personal touch."</blockquote>
+					<cite>Nuala Lynch, RIVA BINGO, UK</cite>
+				</li>
+				<li>
+					<blockquote>"SendMode offer a great and easy to use service. It has increased my business and has halved my costs with a much better service with the personal touch."</blockquote>
+					<cite>Nuala Lynch, RIVA BINGO, UK</cite>
+				</li>
+			</ul>
+			<a class="more" href="#">More Recommendations</a>
 		</aside>
-		
-		<aside class="box">
-			<h1 class="title">By Email</h1>
-			<p itemprop="address" itemscope itemtype="http://schema.org/Organization">
-			<span class="country">Support</span>
-			<span class="tel" itemprop="email"><a href="mailto:evan@example.com" title="Email SendMode">evan@example.com</a></span>
-		</p>
-		
-		</aside>
-		
-		<aside class="box">
-			<h1 class="title">SendMode Address</h1>
-			<section class="paddress" itemscope itemtype="http://schema.org/LocalBusiness">
-				<h2><span itemprop="name">SendMode.com</span></h2>
-				<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-					<span itemprop="streetAddress"> Co-LAB, LYIT</span>,
-					<span itemprop="addressLocality">Letterkenny</span>,
-					<span itemprop="addressRegion">Co. Donegal</span>,
-					<span itemprop="addressCountry">Ireland</span>
-				</p>
-			</section>
-		
+		<aside id="developerAPI" class="box">
+			<h1 class="title">Developer API</h1>
+			<p><strong>SendMode API</strong> SMS enable any Website or Application</p>
+			<span class="sendmode pic_sendmodeapi omega">Developer API</span>
+			<a class="more" href="#">Learn More</a>
 		</aside>
 	</div>
 	<footer class="sixteen columns" role="contentinfo">
@@ -191,11 +234,12 @@
 <section class="container">
 <h1 class="visuallyhidden">SendMode Copyright</h1>
 <span class="five columns CopyRight"><a href="#" title="CopyRight">All Right Reserved 2012, SendMode</a></span>
-<span class="five columns CopyRight" itemscope itemtype="http://schema.org/CreativeWork">Handcrafted by: <a rel="me" itemprop="creator" href="http://be.net/evanshajed" title="User Experience Designed with love">Shajed Evan</a></span>
 </section>
 <!--! end of #container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="js/mylib/jquery.flexslider-min.js"></script>
 <!-- scripts concatenated and minified via ant build script-->
 <script src="js/plugins.js"></script>
 <script src="js/script.js"></script>
