@@ -313,7 +313,6 @@ Taken from Skeleton by Dave Gamache // http://www.davegamache.com/
    #topContainer span.country:after{content:": ";}
 	
 	/* header segment */
-	#header{ border-bottom: 3px solid #094174;}
 	#header h1 {display:inline-block;}
 	.ie7 #header a h1{
 		display:block;
@@ -454,7 +453,7 @@ nav#headerNav li.login a:hover{
 	
 	
 	/* Flex Slider */
-	.flex-container{width: 95%;left:15px;}
+	.flex-container{width: 94%; left:3%}
 	.flex-container a:link{
 		color: #CCC;
 	}
