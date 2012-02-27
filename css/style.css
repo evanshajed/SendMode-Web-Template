@@ -519,99 +519,84 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 
 
 /** Pricing Table **/
+.pricing_table {
+	left:20px;
+	display: block;
+	float:left;
+	position: relative;
+	z-index: 99999;
+	border:1px solid #c4cbcc;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	behavior: url(PIE.htc);
+	outline:7px solid #f2f3f3;
+}
 
-table.priceTable{
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.4em;
-    font-style: normal;
-    border-collapse:separate;
-    width: 95%;
-    margin: 1em;
+.pricing_table ul {
+	list-style:none;
+	float:left;
+	width:155px;
+	margin:0;
+	border:1px solid #f2f3f3;
+	padding:0px;
+	text-align:center;
+	background-color:#FFF;
 }
-.priceTable thead th{
-    padding:15px;
-    color:#fff;
-    text-shadow:1px 1px 1px #568F23;
-    border:1px solid #93CE37;
-    border-bottom:3px solid #9ED929;
-    background-color:#9DD929;
-    background:-webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        color-stop(0.02, rgb(123,192,67)),
-        color-stop(0.51, rgb(139,198,66)),
-        color-stop(0.87, rgb(158,217,41))
-        );
-    background: -moz-linear-gradient(
-        center bottom,
-        rgb(123,192,67) 2%,
-        rgb(139,198,66) 51%,
-        rgb(158,217,41) 87%
-        );
-    -webkit-border-top-left-radius:5px;
-    -webkit-border-top-right-radius:5px;
-    -moz-border-radius:5px 5px 0px 0px;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+
+.pricing_table ul:hover {
+	-webkit-transform: scale(1.1);
+  	-moz-transform: scale(1.1);
+  	-o-transform: scale(1.1);
+  	-moz-box-shadow:3px 5px 7px rgba(0,0,0,.7);
+  	-webkit-box-shadow: 3px 5px 7px rgba(0,0,0,.7);
+  	box-shadow:3px 5px 7px rgba(0,0,0,.7);
+  	behavior: url(PIE.htc);
+	cursor:pointer;
 }
-.priceTable thead th:empty{
-    background:transparent;
-    border:none;
+
+.pricing_table ul li {
+	border-bottom:1px dashed #cfd2d2;
+	background: #EEE;
+	padding:0.9em 0;
 }
-.priceTable tbody th{
-    color:#fff;
-    text-shadow:1px 1px 1px #568F23;
-    background-color:#9DD929;
-    border:1px solid #93CE37;
-    border-right:3px solid #9ED929;
-    padding:0px 10px;
-    background:-webkit-gradient(
-        linear,
-        left bottom,
-        right top,
-        color-stop(0.02, rgb(158,217,41)),
-        color-stop(0.51, rgb(139,198,66)),
-        color-stop(0.87, rgb(123,192,67))
-        );
-    background: -moz-linear-gradient(
-        left bottom,
-        rgb(158,217,41) 2%,
-        rgb(139,198,66) 51%,
-        rgb(123,192,67) 87%
-        );
-    -moz-border-radius:5px 0px 0px 5px;
-    -webkit-border-top-left-radius:5px;
-    -webkit-border-bottom-left-radius:5px;
-    border-top-left-radius:5px;
-    border-bottom-left-radius:5px;
+
+.pricing_table ul li:first-child {
+	font-size:1em;
+	font-weight:bold;
+	padding: 0.5em 0;
+	background: #2881BF;
+	color: #FFF;
 }
-.priceTable tfoot td{
-    color: #9CD009;
-    font-size:32px;
-    text-align:center;
-    padding:10px 0px;
-    text-shadow:1px 1px 1px #444;
+.pricing_table ul li:nth-child(2) {
+	background:#063163;
+	font-size: 1.5em;
+	color: #FFF;
 }
-.priceTable tfoot th{
-    color:#666;
+.pricing_table ul li:nth-child(3) {
+	font-size:12px;
+	font-weight:bold;
 }
-.priceTable tbody td{
-    padding:10px;
-    text-align:center;
-    background-color:#DEF3CA;
-    border: 2px solid #E7EFE0;
-    -moz-border-radius:2px;
-    -webkit-border-radius:2px;
-    border-radius:2px;
-    color:#666;
-    text-shadow:1px 1px 1px #fff;
+.pricing_table ul li:nth-child(n+4) {
+	font-size:14px;
 }
-.priceTable tbody span.check::before{
-   
+.pricing_table ul li:last-child a {
+	color:#FFF;
+	font-weight: 400;
+	font-size: 1.3em;
+	display:block;
+	text-decoration: none;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #c4cbcc;
+	padding:5px 10px;
+	margin:5px;
+	background: #C92716; /* Old browsers */
+	behavior: url(PIE.htc);
 }
+
+/** Box Styling **/
 
 	.box{
 	margin-bottom: 1em;
@@ -628,6 +613,7 @@ table.priceTable{
 	box-shadow: 0px 1px 1px 0.8px #DDD;
 	behavior: url(PIE.htc);
 	}
+	
 	
 	.section-box{
 		border: none;
