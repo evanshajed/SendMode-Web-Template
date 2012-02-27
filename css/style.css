@@ -453,7 +453,7 @@ nav#headerNav li.login a:hover{
 	
 	
 	/* Flex Slider */
-	.flex-container{width: 94%; left:3%}
+	.flex-container{width: 94%;}
 	.flex-container a:link{
 		color: #CCC;
 	}
@@ -629,13 +629,19 @@ table.priceTable{
 	behavior: url(PIE.htc);
 	}
 	
+	.section-box{
+		border: none;
+		padding: 0;
+		margin:0;
+	}
+	
 	.box h2{
 	margin: 1em 0;
 	}
 
 	.ie7 .box,.ie8 .box{background: #FFFFFF;}
 	
-	h1.title{
+	h1.title,h1.section-title{
 		color: #FFF;
 		z-index: 0px;
 		position: relative;
@@ -654,7 +660,15 @@ table.priceTable{
 		box-shadow: inset 0px -1px 1px 0px #1CAFBF;
 	}
 		
-	h1.title:before,ul#double li:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	h1.title:before,ul#double li:before,h1.section-title:before{ content:url(../images/circlebullets.png); width: 10px; height: 10px; padding-right: 10px;}
+	h1.section-title{
+		-moz-border-radius:0px;
+		-webkit-border-radius:0px;
+		border-radius:0px;
+		-pie-border-radius:0px;
+		behavior: url(PIE.htc);
+		-khtml-border-radius:0px;
+	}
 	
 	.box p, .box section{padding:0.5em 1em;}
 	aside.box p{padding: 0.3em 1em;}
@@ -800,6 +814,10 @@ padding-top:0;
 
 
 	/* Aside */
+	
+	#sidebar{
+		margin-left:-3px;
+	}
 	
 	#recommendation ul{margin:0 auto; padding: 0.8em 0.5em 0.5em 1em; margin-bottom: 1.2em;}
 	#recommendation ul li{list-style: none; padding: 0;margin: 0 0 1.2em 0;}
