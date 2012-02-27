@@ -593,6 +593,8 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 	padding:5px 10px;
 	margin:5px;
 	background: #C92716; /* Old browsers */
+	position: relative;
+	z-index: 9999;
 	behavior: url(PIE.htc);
 }
 
