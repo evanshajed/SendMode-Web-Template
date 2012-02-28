@@ -568,7 +568,13 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 	background: #2881BF;
 	color: #FFF;
 }
+
 .pricing_table ul li:nth-child(2) {
+	background:#063163;
+	font-size: 1.5em;
+	color: #FFF;
+}
+.ie6 .pricing_table ul li.price,.ie7 .pricing_table ul li.price,.ie8 .pricing_table ul li.price{
 	background:#063163;
 	font-size: 1.5em;
 	color: #FFF;
@@ -577,10 +583,28 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 	font-size:12px;
 	font-weight:bold;
 }
+.ie8 .pricing_table ul li.bold{
+	font-size:12px;
+	font-weight:bold;
+}
 .pricing_table ul li:nth-child(n+4) {
 	font-size:14px;
 }
-.pricing_table ul li:last-child a {
+.pricing_table ul li:last-child a{
+	color:#FFF;
+	font-weight: 400;
+	font-size: 1.3em;
+	display:block;
+	text-decoration: none;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #c4cbcc;
+	padding:5px 10px;
+	margin:5px;
+	background: #C92716; /* Old browsers */
+}
+.ie6 .pricing_table ul li.buy_now a,.ie7 .pricing_table ul li.buy_now a,.ie8 .pricing_table ul li.buy_now a{
 	color:#FFF;
 	font-weight: 400;
 	font-size: 1.3em;
