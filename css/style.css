@@ -531,6 +531,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 	-webkit-border-radius:4px;
 	behavior: url(PIE.htc);
 	outline:7px solid #f2f3f3;
+	margin-bottom: 2em;
 }
 
 .pricing_table ul {
@@ -952,7 +953,7 @@ padding-top:0;
     
 @media only screen and (device-width: 768px) {
 
-#topContainer a:link{text-decoration: none;color: #FFF} 
+#topContainer a:link{text-decoration: none;color: #094174} 
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
